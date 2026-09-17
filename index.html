@@ -56,6 +56,18 @@ section{scroll-margin-top:24px;margin-top:34px}.section-head{display:flex;justif
 .topic-gallery .photo-panel figcaption{left:14px;right:14px;bottom:13px}
 .topic-gallery .photo-panel figcaption strong{font-size:15px}
 .gallery-intro{margin:22px 0 0;color:#52606a;font-size:13px;font-weight:700}
+/* Rustige diepte op aanwijzen; focus blijft zichtbaar voor toetsenbordgebruikers. */
+@media(hover:hover) and (pointer:fine){
+  .card,.feature,.phase,.photo-panel,.stage,.flowbox,.valuebox,.northstar,.prototype-cta{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+  .card:hover,.feature:hover,.phase:hover,.photo-panel:hover,.stage:hover,.flowbox:hover,.valuebox:hover,.northstar:hover,.prototype-cta:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(25,37,66,.13);border-color:#d0e8d9}
+  .photo-panel:hover{box-shadow:0 20px 42px rgba(25,37,66,.2)}
+  .nav a{transition:background .2s ease,transform .2s ease,box-shadow .2s ease}
+  .nav a:hover{transform:translateX(3px);box-shadow:0 8px 20px rgba(0,0,0,.13)}
+  .prototype-cta a{transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+  .prototype-cta a:hover{box-shadow:0 12px 24px rgba(85,215,138,.28)}
+}
+.nav a:focus-visible,.prototype-cta a:focus-visible,footer a:focus-visible{outline:3px solid var(--id);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.feature,.phase,.photo-panel,.stage,.flowbox,.valuebox,.northstar,.prototype-cta,.nav a,.prototype-cta a{transition:none!important;transform:none!important}}
 footer a{color:#19754b;text-decoration:underline;text-underline-offset:2px}
 footer{padding:28px 4px;color:#8a9099;font-size:11px;display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);margin-top:44px}
 .progress{position:fixed;z-index:100;top:0;left:280px;height:3px;background:linear-gradient(90deg,var(--id),var(--id2));width:0}
