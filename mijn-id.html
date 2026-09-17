@@ -61,6 +61,20 @@ h1{font-size:clamp(36px,4.8vw,68px);line-height:.96;letter-spacing:-.055em;margi
 .interest-card p{font-size:12px;line-height:1.5;color:var(--muted);margin:0}
 @media(max-width:1000px){.interest-card{grid-column:span 4}}
 @media(max-width:700px){.interest-card{grid-column:span 12}.interest-image{height:175px}}
+
+/* Zachte verheffing voor kaarten en bediening zonder de bestaande opmaak te verschuiven. */
+@media(hover:hover) and (pointer:fine){
+  .card,.hero-card,.device,.search,.sidebar-note,.poll{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+  .card:hover,.hero-card:hover,.device:hover,.search:hover,.sidebar-note:hover,.poll:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(25,37,66,.14);border-color:#cbe7d5}
+  .hero-card:hover{box-shadow:0 28px 56px rgba(37,45,80,.26)}
+  .article,.alert,.saved-item,.option,.nav button,.sidebar-note button,.bottomnav button{transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+  .article:hover,.alert:hover,.saved-item:hover{background:#f4faf6;box-shadow:inset 3px 0 var(--brand)}
+  .option:hover{transform:translateY(-2px);background:#394670;box-shadow:0 8px 18px rgba(0,0,0,.16)}
+  .nav button:hover,.sidebar-note button:hover,.bottomnav button:hover{transform:translateY(-2px);box-shadow:0 9px 20px rgba(0,0,0,.14)}
+}
+.search:focus-within{border-color:var(--brand-2);box-shadow:0 0 0 4px rgba(85,215,138,.16),0 12px 28px rgba(25,37,66,.1)}
+.nav button:focus-visible,.sidebar-note button:focus-visible,.bottomnav button:focus-visible,.link:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.hero-card,.device,.search,.sidebar-note,.poll,.article,.alert,.saved-item,.option,.nav button,.sidebar-note button,.bottomnav button{transition:none!important;transform:none!important}}
 </style>
 </head>
 <body>
@@ -179,3 +193,4 @@ document.querySelectorAll('[data-view]').forEach(btn=>btn.addEventListener('clic
 </script>
 </body>
 </html>
+
