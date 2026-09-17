@@ -44,10 +44,23 @@ section{scroll-margin-top:24px;margin-top:34px}.section-head{display:flex;justif
 .risk{display:grid;grid-template-columns:150px 1fr 1fr;gap:16px;align-items:start;border-bottom:1px solid var(--line);padding:16px 0}.risk:last-child{border-bottom:0}.risk b{font-size:13px}.risk p{font-size:13px;color:var(--muted);margin:0}.risk .guard{color:#313741}.tag{display:inline-block;padding:5px 8px;border-radius:8px;background:#f1f3f5;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
 .decision{background:linear-gradient(135deg,#252d50,#304d60 56%,#2fbd76);color:#fff;border-radius:28px;padding:34px}.decision h2{font-size:40px;letter-spacing:-.045em;line-height:1;margin:0 0 14px}.decision p{max-width:780px;color:#edf5f1;margin:0}.decision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.decision-card{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.26);border-radius:16px;padding:18px}.decision-card small{display:block;text-transform:uppercase;letter-spacing:.12em;font-weight:800;opacity:.75}.decision-card b{display:block;font-size:17px;margin:5px 0 4px}.decision-card span{font-size:12px;opacity:.9}
 .prototype-cta{margin-top:18px;background:#252d50;color:#fff;border-radius:20px;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 12px 32px rgba(37,45,80,.12)}.prototype-cta .copy{max-width:720px}.prototype-cta .mini-kicker{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#76e4a5;font-weight:900}.prototype-cta h3{margin:4px 0 4px;font-size:19px;letter-spacing:-.02em}.prototype-cta p{margin:0;color:#cbd1df;font-size:13px}.prototype-cta a{flex:none;background:#55d78a;color:#1d2948;padding:11px 15px;border-radius:12px;font-size:13px;font-weight:900;box-shadow:0 8px 20px rgba(85,215,138,.18)}.prototype-cta a:hover{background:#6ee09b;transform:translateY(-1px)}
+.visual-intro{display:grid;grid-template-columns:1.25fr .75fr;gap:16px;margin-top:18px}
+.photo-panel{position:relative;isolation:isolate;overflow:hidden;min-height:230px;margin:0;border-radius:22px;background:var(--dark);box-shadow:var(--shadow)}
+.photo-panel img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
+.photo-panel:after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,rgba(22,28,48,0) 25%,rgba(22,28,48,.84) 100%)}
+.photo-panel figcaption{position:absolute;z-index:2;left:22px;right:22px;bottom:19px;color:#fff;line-height:1.2}
+.photo-panel figcaption small{display:block;color:#8ce5af;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.photo-panel figcaption strong{display:block;max-width:490px;font-size:20px;letter-spacing:-.025em}
+.topic-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+.topic-gallery .photo-panel{min-height:165px;border-radius:18px;box-shadow:none}
+.topic-gallery .photo-panel figcaption{left:14px;right:14px;bottom:13px}
+.topic-gallery .photo-panel figcaption strong{font-size:15px}
+.gallery-intro{margin:22px 0 0;color:#52606a;font-size:13px;font-weight:700}
+footer a{color:#19754b;text-decoration:underline;text-underline-offset:2px}
 footer{padding:28px 4px;color:#8a9099;font-size:11px;display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);margin-top:44px}
 .progress{position:fixed;z-index:100;top:0;left:280px;height:3px;background:linear-gradient(90deg,var(--id),var(--id2));width:0}
-@media(max-width:980px){.shell{display:block}aside{position:relative;height:auto}.nav{display:flex;gap:6px;overflow:auto}.navlabel,.aside-note{display:none}.nav a{white-space:nowrap}.wrap{padding:24px}.progress{left:0}.g3,.g4,.timeline{grid-template-columns:1fr 1fr}.big-idea,.northstar,.value-grid{grid-template-columns:1fr}.fly-row{grid-template-columns:1fr}.fly-arrow{transform:rotate(90deg)}.stage{grid-template-columns:90px 1fr}.stage .trigger{grid-column:2}.stage:nth-child(n){margin-left:0;margin-right:0}}
-@media(max-width:680px){.prototype-cta{display:block}.prototype-cta a{display:inline-block;margin-top:14px}.hero{padding:34px 24px;min-height:auto}.hero p{font-size:17px}.wrap{padding:14px}.g2,.g3,.g4,.timeline,.decision-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}.stage{grid-template-columns:1fr}.stage .trigger{grid-column:1}.metric{font-size:42px}.eco{grid-template-columns:1fr}.risk{grid-template-columns:1fr}footer{display:block}}
+@media(max-width:980px){.shell{display:block}aside{position:relative;height:auto}.nav{display:flex;gap:6px;overflow:auto}.navlabel,.aside-note{display:none}.nav a{white-space:nowrap}.wrap{padding:24px}.progress{left:0}.g3,.g4,.timeline{grid-template-columns:1fr 1fr}.big-idea,.northstar,.value-grid{grid-template-columns:1fr}.topic-gallery{grid-template-columns:1fr 1fr}.fly-row{grid-template-columns:1fr}.fly-arrow{transform:rotate(90deg)}.stage{grid-template-columns:90px 1fr}.stage .trigger{grid-column:2}.stage:nth-child(n){margin-left:0;margin-right:0}}
+@media(max-width:680px){.prototype-cta{display:block}.prototype-cta a{display:inline-block;margin-top:14px}.hero{padding:34px 24px;min-height:auto}.hero p{font-size:17px}.wrap{padding:14px}.visual-intro{grid-template-columns:1fr}.visual-intro .photo-panel{min-height:205px}.topic-gallery .photo-panel{min-height:145px}.photo-panel figcaption strong{font-size:17px}.g2,.g3,.g4,.timeline,.decision-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}.stage{grid-template-columns:1fr}.stage .trigger{grid-column:1}.metric{font-size:42px}.eco{grid-template-columns:1fr}.risk{grid-template-columns:1fr}footer{display:block}}
 @media print{aside,.progress{display:none}.shell{display:block}.wrap{max-width:none;padding:0}.hero{break-after:page}.card,.phase,.flow,.northstar,.decision,.valuebox{break-inside:avoid;box-shadow:none}body{background:#fff}.hero{border-radius:0}}
 </style>
 </head>
@@ -84,6 +97,11 @@ footer{padding:28px 4px;color:#8a9099;font-size:11px;display:flex;justify-conten
     <div class="meta"><span>Strategie: community & loyaliteit</span><i></i><span>Horizon: 12+ maanden</span><i></i><span>Focus: eerst gedrag, daarna platform</span></div>
   </div>
 </header>
+
+<div class="visual-intro" aria-label="Sfeerbeelden bij het businessplan">
+  <figure class="photo-panel"><img src="assets/images/redactie.avif" alt="Camera en tablet op een werkplek voor digitale media" width="1470" height="980"><figcaption><small>Redactionele kracht · sfeerbeeld</small><strong>Kennis en herkenbare makers als vertrekpunt</strong></figcaption></figure>
+  <figure class="photo-panel"><img src="assets/images/gaming.avif" alt="Gamecontroller in blauw en rood neonlicht" width="735" height="490"><figcaption><small>Onderwerpen die leven</small><strong>Van tech tot gaming: redenen om terug te komen</strong></figcaption></figure>
+</div>
 
 <section id="samenvatting">
   <div class="section-head"><div><div class="kicker">01 · Executive summary</div><h2>De strategie in één oogopslag</h2></div><p>ID.nl moet niet primair proberen “een community te lanceren”, maar een productrelatie opbouwen waarin bezoekers steeds meer reden krijgen om terug te keren, mee te doen en zich met het merk te identificeren.</p></div>
@@ -133,6 +151,13 @@ footer{padding:28px 4px;color:#8a9099;font-size:11px;display:flex;justify-conten
       <div class="feature"><div class="ico">↗</div><div><b>Ik wil weten wanneer</b><span>Prijs daalt, review verschijnt, firmware wijzigt of belangrijk nieuws uitkomt.</span></div></div>
       <div class="feature"><div class="ico">≋</div><div><b>Mijn feed</b><span>Een logische startpagina die de algemene homepage aanvult, niet vervangt.</span></div></div>
     </div>
+  </div>
+  <p class="gallery-intro">Voorbeeldthema’s voor de persoonlijke feed van Mijn ID:</p>
+  <div class="topic-gallery" aria-label="Voorbeeldthema’s voor Mijn ID">
+    <figure class="photo-panel"><img src="assets/images/iphone.avif" alt="iPhone naast een MacBook op een bureau" loading="lazy" width="1548" height="1032"><figcaption><small>Je volgt</small><strong>Apple & iPhone</strong></figcaption></figure>
+    <figure class="photo-panel"><img src="assets/images/ai.avif" alt="Laptop met een AI-toepassing in een werkruimte" loading="lazy" width="1471" height="981"><figcaption><small>Je ontdekt</small><strong>AI in de praktijk</strong></figcaption></figure>
+    <figure class="photo-panel"><img src="assets/images/thuisbatterij.avif" alt="Installatie voor zonne-energie en opslag in een woning" loading="lazy" width="774" height="516"><figcaption><small>Je overweegt</small><strong>Thuisbatterijen</strong></figcaption></figure>
+    <figure class="photo-panel"><img src="assets/images/smart-home.avif" alt="Bedieningspaneel voor een slim huis aan de muur" loading="lazy" width="1470" height="980"><figcaption><small>Je gebruikt</small><strong>Smart home</strong></figcaption></figure>
   </div>
   <div class="prototype-cta">
     <div class="copy"><div class="mini-kicker">Interactieve mockup</div><h3>Hoe zou Mijn ID er in de praktijk uit kunnen zien?</h3><p>Open het losse concept om de persoonlijke startpagina, navigatie, apparaten, interesses, community en meldingen te bekijken.</p></div>
@@ -245,7 +270,7 @@ footer{padding:28px 4px;color:#8a9099;font-size:11px;display:flex;justify-conten
   </div>
 </section>
 
-<footer><span>ID.nl · Businessplan Community & Loyaliteit · concept</span><span>Strategische kern: nut → participatie → identiteit</span></footer>
+<footer><span>ID.nl · Businessplan Community & Loyaliteit · concept</span><span>Strategische kern: nut → participatie → identiteit</span><span>Sfeerbeelden: <a href="https://github.com/ee1koo/id2027/blob/main/assets/BEELDBRONNEN.md">Unsplash-bronnen</a></span></footer>
 </div></main></div>
 <script>
 const bar=document.getElementById('progress');
@@ -253,3 +278,4 @@ addEventListener('scroll',()=>{const d=document.documentElement;const p=d.scroll
 </script>
 </body>
 </html>
+
