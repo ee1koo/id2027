@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ID.nl — Businessplan Community & Loyaliteit</title>
+<meta name="description" content="Businessplan voor het bouwen van een terugkerende ID.nl-community: van toevallige bezoeker naar betrokken gebruiker." />
+<style>
+:root{
+  --bg:#f6f7f9; --paper:#ffffff; --ink:#101114; --muted:#6a6f7a; --line:#e5e7eb;
+  --id:#55d78a; --id2:#2fbd76; --blue:#252d50; --cyan:#4aa991; --lime:#9ee0b8;
+  --dark:#252d50; --dark2:#30395f; --soft:#f0f2f5; --shadow:0 16px 50px rgba(10,15,25,.08);
+  --radius:22px; --radius-sm:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.shell{display:grid;grid-template-columns:280px minmax(0,1fr);min-height:100vh}
+aside{position:sticky;top:0;height:100vh;background:var(--dark);color:#fff;padding:26px 22px;overflow:auto}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:30px}.logo{width:46px;height:46px;border-radius:14px;background:#fff;color:var(--dark);border:1px solid rgba(255,255,255,.16);display:grid;place-items:center;font-weight:950;letter-spacing:-.06em;font-size:18px;box-shadow:0 12px 28px rgba(0,0,0,.16)}.logo::first-letter{color:var(--id)}
+.brand b{font-size:15px}.brand small{display:block;color:#aeb4c0;margin-top:2px}
+.navlabel{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:#78808d;margin:20px 10px 8px}.nav a{display:block;padding:10px 12px;border-radius:10px;color:#c7ccd5;font-size:14px;margin:2px 0}.nav a:hover{background:#20242e;color:#fff}.nav a strong{color:#fff}
+.aside-note{margin-top:28px;padding:16px;border:1px solid #2a303a;border-radius:16px;background:linear-gradient(180deg,#171b24,#12151c);font-size:12.5px;color:#abb2be}.aside-note b{display:block;color:#fff;margin-bottom:6px}
+main{min-width:0}.wrap{max-width:1220px;margin:0 auto;padding:34px 42px 90px}
+.hero{position:relative;overflow:hidden;border-radius:30px;background:var(--dark);color:#fff;padding:54px 54px 48px;box-shadow:var(--shadow);min-height:470px}.hero:before{content:"";position:absolute;inset:-30% auto auto 55%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(85,215,138,.46),rgba(74,169,145,.18) 43%,transparent 70%);filter:blur(8px)}.hero:after{content:"";position:absolute;width:220px;height:220px;right:5%;bottom:-70px;border:1px solid rgba(255,255,255,.16);border-radius:50%;box-shadow:0 0 0 40px rgba(255,255,255,.03),0 0 0 80px rgba(255,255,255,.02)}
+.hero-inner{position:relative;z-index:1;max-width:900px}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 10px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#dbe0e7;font-size:12px;text-transform:uppercase;letter-spacing:.14em}.dot{width:7px;height:7px;border-radius:50%;background:var(--id);box-shadow:0 0 0 5px rgba(85,215,138,.14)}
+h1{font-size:clamp(46px,6vw,82px);line-height:.96;letter-spacing:-.055em;margin:24px 0 20px;max-width:980px}.hero p{font-size:20px;line-height:1.55;color:#cfd4dd;max-width:760px;margin:0}.hero .thesis{margin-top:34px;display:inline-block;background:#fff;color:#111;padding:18px 22px;border-radius:16px;font-size:16px;font-weight:800;max-width:760px}.hero .thesis em{font-style:normal;color:#19754b}
+.meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:28px;color:#9da5b2;font-size:12px}.meta span{display:flex;align-items:center;gap:8px}.meta i{width:5px;height:5px;background:#596170;border-radius:50%}
+section{scroll-margin-top:24px;margin-top:34px}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin:58px 0 20px}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.15em;color:#19754b;font-weight:800}.section-head h2{font-size:38px;line-height:1.05;letter-spacing:-.04em;margin:7px 0 0}.section-head p{max-width:520px;color:var(--muted);margin:0;font-size:15px}
+.grid{display:grid;gap:18px}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 6px 22px rgba(10,15,25,.035)}.card h3{font-size:19px;letter-spacing:-.025em;margin:0 0 8px}.card p{color:var(--muted);margin:0;font-size:14px}.num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--dark);color:#fff;font-size:13px;font-weight:800;margin-bottom:18px}.accent-card{background:linear-gradient(145deg,#fff,#f0fbf4);border-color:#cfeedd}.dark-card{background:var(--dark);color:#fff;border-color:var(--dark)}.dark-card p{color:#bbc1cc}.dark-card .num{background:#fff;color:#111}
+.flow{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:grid;grid-template-columns:1fr 58px 1fr;gap:18px;align-items:center}.flowbox{padding:22px;border-radius:18px;background:#f4f5f7}.flowbox.good{background:linear-gradient(135deg,#effaf3,#f4f7f6)}.flowtitle{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#737986;margin-bottom:10px}.flowline{font-size:22px;font-weight:850;letter-spacing:-.03em;line-height:1.25}.arrow{font-size:30px;text-align:center;color:#9ca3af}
+.big-idea{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.big-idea .lead{background:linear-gradient(135deg,#55d78a 0%,#31bd76 100%);color:#1e2948;padding:34px;border-radius:26px;min-height:350px;position:relative;overflow:hidden}.big-idea .lead:after{content:"MIJN ID";position:absolute;right:-16px;bottom:-30px;font-size:92px;font-weight:950;letter-spacing:-.08em;color:rgba(255,255,255,.12)}.lead h3{font-size:42px;letter-spacing:-.05em;line-height:1;margin:12px 0 18px}.lead p{color:#233554;font-size:16px;max-width:560px}.lead .quote{margin-top:26px;background:rgba(255,255,255,.38);border:1px solid rgba(37,45,80,.13);border-radius:16px;padding:16px 18px;font-weight:700}
+.feature-list{display:grid;gap:12px}.feature{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;gap:14px;align-items:flex-start}.ico{flex:0 0 38px;width:38px;height:38px;border-radius:12px;background:#f1f3f6;display:grid;place-items:center;font-size:18px}.feature b{display:block;margin-bottom:3px}.feature span{font-size:13px;color:var(--muted)}
+.pillars .card{min-height:250px;position:relative;overflow:hidden}.pillars .card:after{content:"";position:absolute;width:95px;height:95px;border-radius:50%;right:-30px;bottom:-30px;background:var(--soft)}.pillars .card:nth-child(1) .num{background:var(--id)}.pillars .card:nth-child(2) .num{background:var(--blue)}.pillars .card:nth-child(3) .num{background:var(--cyan)}.pillars .card:nth-child(4) .num{background:#55638b}.pillars .card:nth-child(5) .num{background:#111}.pillars ul,.plain-list{padding-left:18px;margin:16px 0 0;color:#535a65;font-size:13.5px}.pillars li,.plain-list li{margin:7px 0}
+.flywheel{background:var(--dark);color:#fff;border-radius:26px;padding:30px}.flywheel h3{margin:0 0 4px;font-size:24px}.flywheel p{color:#aeb5c0;margin:0 0 24px}.fly-row{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:center}.fly-node{padding:18px 13px;border:1px solid #2d333d;background:#161a22;border-radius:16px;text-align:center;font-size:13px;min-height:80px;display:grid;place-items:center}.fly-arrow{text-align:center;color:#687180;font-size:20px}
+.funnel{display:grid;gap:9px;max-width:920px;margin:0 auto}.stage{display:grid;grid-template-columns:120px 1fr 240px;gap:16px;align-items:center;padding:17px 20px;border-radius:15px;background:#fff;border:1px solid var(--line)}.stage:nth-child(1){margin:0 0}.stage:nth-child(2){margin:0 3%}.stage:nth-child(3){margin:0 6%}.stage:nth-child(4){margin:0 9%}.stage:nth-child(5){margin:0 12%}.stage:nth-child(6){margin:0 15%;background:var(--dark);color:#fff;border-color:var(--dark)}.stage b{font-size:14px}.stage span{font-size:13px;color:var(--muted)}.stage:nth-child(6) span{color:#b5bdc8}.stage .trigger{font-size:12px;padding:7px 9px;border-radius:8px;background:#f3f4f6;color:#555;text-align:center}.stage:nth-child(6) .trigger{background:#242933;color:#fff}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.phase{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 20px 24px;min-height:330px}.phase .when{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;padding:6px 9px;border-radius:999px;background:#f1f3f5;color:#606672}.phase h3{font-size:20px;margin:14px 0 7px}.phase .goal{font-size:13px;color:var(--muted);min-height:58px}.phase ul{padding-left:17px;font-size:13px;color:#4c535d;margin-top:18px}.phase li{margin:8px 0}.phase.one{border-top:5px solid var(--id)}.phase.two{border-top:5px solid var(--blue)}.phase.three{border-top:5px solid var(--cyan)}.phase.four{border-top:5px solid #15171c}
+.northstar{background:linear-gradient(135deg,#fff 0%,#f1faf4 100%);border:1px solid #d7ecdf;border-radius:26px;padding:30px;display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:center}.metric{font-size:54px;line-height:.95;letter-spacing:-.055em;font-weight:950;margin:8px 0 14px}.northstar p{color:var(--muted);margin:0}.formula{background:#101218;color:#fff;border-radius:18px;padding:20px;font-size:14px}.formula b{color:#78e3a5}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.chip{padding:8px 10px;background:#20242d;border:1px solid #313743;color:#d5dae1;border-radius:999px;font-size:11px}
+.tablewrap{overflow:auto;border-radius:18px;border:1px solid var(--line);background:#fff}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;padding:15px 16px;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#737a85;background:#f6f7f9}td{font-size:13px}tr:last-child td{border-bottom:0}.status{display:inline-block;padding:5px 8px;border-radius:999px;font-weight:800;font-size:10px;background:#f0f2f4}.status.now{background:#e4f7eb;color:#176f48}.status.next{background:#e9edf7;color:#36466f}.status.later{background:#e9f6f2;color:#256f60}
+.experiments .card{min-height:280px}.exp-no{font-size:48px;line-height:1;font-weight:950;letter-spacing:-.06em;color:#e6e8ec;margin-bottom:18px}.experiments h3{font-size:22px}.testline{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:#666d77}.testline b{color:#111}
+.value-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.valuebox{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px}.valuebox h3{font-size:22px;margin:0 0 16px}.value-row{display:grid;grid-template-columns:36px 1fr;gap:12px;margin:14px 0}.value-row .mark{width:34px;height:34px;border-radius:11px;background:#f3f4f6;display:grid;place-items:center;font-weight:900}.value-row b{font-size:14px}.value-row p{font-size:12.5px;color:var(--muted);margin:2px 0 0}.ecosystem{background:linear-gradient(150deg,#11141b,#222631);color:#fff}.ecosystem p{color:#b7bec9}.eco{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:18px}.eco div{padding:16px;border:1px solid #353b46;border-radius:14px;background:#191d25;font-size:12px;text-align:center}.eco b{display:block;color:#fff;font-size:15px;margin-bottom:3px}
+.risk{display:grid;grid-template-columns:150px 1fr 1fr;gap:16px;align-items:start;border-bottom:1px solid var(--line);padding:16px 0}.risk:last-child{border-bottom:0}.risk b{font-size:13px}.risk p{font-size:13px;color:var(--muted);margin:0}.risk .guard{color:#313741}.tag{display:inline-block;padding:5px 8px;border-radius:8px;background:#f1f3f5;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.decision{background:linear-gradient(135deg,#252d50,#304d60 56%,#2fbd76);color:#fff;border-radius:28px;padding:34px}.decision h2{font-size:40px;letter-spacing:-.045em;line-height:1;margin:0 0 14px}.decision p{max-width:780px;color:#edf5f1;margin:0}.decision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.decision-card{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.26);border-radius:16px;padding:18px}.decision-card small{display:block;text-transform:uppercase;letter-spacing:.12em;font-weight:800;opacity:.75}.decision-card b{display:block;font-size:17px;margin:5px 0 4px}.decision-card span{font-size:12px;opacity:.9}
+.prototype-cta{margin-top:18px;background:#252d50;color:#fff;border-radius:20px;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 12px 32px rgba(37,45,80,.12)}.prototype-cta .copy{max-width:720px}.prototype-cta .mini-kicker{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#76e4a5;font-weight:900}.prototype-cta h3{margin:4px 0 4px;font-size:19px;letter-spacing:-.02em}.prototype-cta p{margin:0;color:#cbd1df;font-size:13px}.prototype-cta a{flex:none;background:#55d78a;color:#1d2948;padding:11px 15px;border-radius:12px;font-size:13px;font-weight:900;box-shadow:0 8px 20px rgba(85,215,138,.18)}.prototype-cta a:hover{background:#6ee09b;transform:translateY(-1px)}
+footer{padding:28px 4px;color:#8a9099;font-size:11px;display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);margin-top:44px}
+.progress{position:fixed;z-index:100;top:0;left:280px;height:3px;background:linear-gradient(90deg,var(--id),var(--id2));width:0}
+@media(max-width:980px){.shell{display:block}aside{position:relative;height:auto}.nav{display:flex;gap:6px;overflow:auto}.navlabel,.aside-note{display:none}.nav a{white-space:nowrap}.wrap{padding:24px}.progress{left:0}.g3,.g4,.timeline{grid-template-columns:1fr 1fr}.big-idea,.northstar,.value-grid{grid-template-columns:1fr}.fly-row{grid-template-columns:1fr}.fly-arrow{transform:rotate(90deg)}.stage{grid-template-columns:90px 1fr}.stage .trigger{grid-column:2}.stage:nth-child(n){margin-left:0;margin-right:0}}
+@media(max-width:680px){.prototype-cta{display:block}.prototype-cta a{display:inline-block;margin-top:14px}.hero{padding:34px 24px;min-height:auto}.hero p{font-size:17px}.wrap{padding:14px}.g2,.g3,.g4,.timeline,.decision-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}.stage{grid-template-columns:1fr}.stage .trigger{grid-column:1}.metric{font-size:42px}.eco{grid-template-columns:1fr}.risk{grid-template-columns:1fr}footer{display:block}}
+@media print{aside,.progress{display:none}.shell{display:block}.wrap{max-width:none;padding:0}.hero{break-after:page}.card,.phase,.flow,.northstar,.decision,.valuebox{break-inside:avoid;box-shadow:none}body{background:#fff}.hero{border-radius:0}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="shell">
+<aside>
+  <div class="brand"><div class="logo">ID</div><div><b>ID.nl</b><small>Community & loyaliteit</small></div></div>
+  <div class="navlabel">Businessplan</div>
+  <nav class="nav">
+    <a href="#samenvatting"><strong>01</strong> Samenvatting</a>
+    <a href="#probleem"><strong>02</strong> Probleem & kans</a>
+    <a href="#strategie"><strong>03</strong> Strategie</a>
+    <a href="#mijnid"><strong>04</strong> Mijn ID</a>
+    <a href="#bouwstenen"><strong>05</strong> Bouwstenen</a>
+    <a href="#funnel"><strong>06</strong> Communityfunnel</a>
+    <a href="#roadmap"><strong>07</strong> Roadmap</a>
+    <a href="#kpis"><strong>08</strong> KPI's</a>
+    <a href="#experimenten"><strong>09</strong> Experimenten</a>
+    <a href="#business"><strong>10</strong> Businesswaarde</a>
+    <a href="#risicos"><strong>11</strong> Risico's</a>
+    <a href="#besluit"><strong>12</strong> Eerste besluit</a>
+  </nav>
+  <div class="aside-note"><b>Strategisch uitgangspunt</b>Niet beginnen met een forum. Eerst redenen bouwen om uit jezelf terug te komen. Daarna participatie, identiteit en reputatie toevoegen.</div>
+</aside>
+<main><div class="wrap">
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow"><span class="dot"></span> Businessplan · concept v1.0</span>
+    <h1>Van toevallige bezoeker naar vaste ID-gebruiker.</h1>
+    <p>Een strategie om ID.nl minder afhankelijk te maken van incidenteel zoekverkeer en stap voor stap een loyale, actieve en waardevolle gebruikersbasis op te bouwen.</p>
+    <div class="thesis">Bouw niet eerst een community. Bouw eerst <em>redenen om terug te komen</em>. De community ontstaat daar vervolgens omheen.</div>
+    <div class="meta"><span>Strategie: community & loyaliteit</span><i></i><span>Horizon: 12+ maanden</span><i></i><span>Focus: eerst gedrag, daarna platform</span></div>
+  </div>
+</header>
+
+<section id="samenvatting">
+  <div class="section-head"><div><div class="kicker">01 · Executive summary</div><h2>De strategie in één oogopslag</h2></div><p>ID.nl moet niet primair proberen “een community te lanceren”, maar een productrelatie opbouwen waarin bezoekers steeds meer reden krijgen om terug te keren, mee te doen en zich met het merk te identificeren.</p></div>
+  <div class="grid g3">
+    <div class="card accent-card"><div class="num">1</div><h3>Nut</h3><p>Maak terugkomen functioneel waardevol met volgen, bewaren, alerts, persoonlijke aanbevelingen en een eigen apparatenprofiel.</p></div>
+    <div class="card"><div class="num">2</div><h3>Participatie</h3><p>Laat bezoekers laagdrempelig stemmen, vragen stellen, testen, ervaringen delen en invloed hebben op journalistieke keuzes.</p></div>
+    <div class="card dark-card"><div class="num">3</div><h3>Identiteit</h3><p>Voeg daarna herkenning, profielen, expertise, reputatie en vaste gezichten toe. Dan ontstaat het gevoel: “dit is mijn plek”.</p></div>
+  </div>
+</section>
+
+<section id="probleem">
+  <div class="section-head"><div><div class="kicker">02 · Probleem & kans</div><h2>Van zoekmoment naar relatie</h2></div><p>De huidige waarde ontstaat vooral op het moment dat iemand een antwoord zoekt. De nieuwe waarde ontstaat wanneer ID de context, interesses en intentie van die bezoeker mag onthouden.</p></div>
+  <div class="flow">
+    <div class="flowbox"><div class="flowtitle">Vandaag</div><div class="flowline">Google → artikel → antwoord → weg</div></div>
+    <div class="arrow">→</div>
+    <div class="flowbox good"><div class="flowtitle">Gewenst</div><div class="flowline">Google → waarde → voorkeur → terugkeer → deelname</div></div>
+  </div>
+  <div class="grid g4" style="margin-top:18px">
+    <div class="card"><h3>Afhankelijkheid</h3><p>Veel waarde wordt telkens opnieuw “ingekocht” via distributie, zoekmachines en algoritmes.</p></div>
+    <div class="card"><h3>Weinig geheugen</h3><p>De site weet nauwelijks wat een bezoeker bezit, volgt, overweegt of eerder nuttig vond.</p></div>
+    <div class="card"><h3>Veel onbenut gedrag</h3><p>Lezers lezen al reviews, koopgidsen, dossiers en tips — maar dat gedrag wordt nog weinig verbonden.</p></div>
+    <div class="card"><h3>Sterke uitgangspositie</h3><p>Redactionele expertise, dossiers, reviews, prijzen, tests en productkennis lenen zich juist goed voor herhaalgebruik.</p></div>
+  </div>
+</section>
+
+<section id="strategie">
+  <div class="section-head"><div><div class="kicker">03 · Strategisch model</div><h2>Drie lagen die op elkaar bouwen</h2></div><p>De volgorde is belangrijk. Wie te vroeg om deelname of registratie vraagt, creëert frictie. Wie eerst persoonlijke waarde levert, verdient toestemming voor een diepere relatie.</p></div>
+  <div class="grid g3">
+    <div class="card"><div class="kicker">Laag 1</div><h3>Persoonlijke utility</h3><ul class="plain-list"><li>Volgen</li><li>Bewaren</li><li>Prijs- en contentalerts</li><li>Persoonlijke feed</li><li>Mijn apparaten</li></ul></div>
+    <div class="card"><div class="kicker">Laag 2</div><h3>Participatie</h3><ul class="plain-list"><li>Polls</li><li>Vragen</li><li>Testoproepen</li><li>Ervaringen</li><li>Lezersinput in artikelen</li></ul></div>
+    <div class="card dark-card"><div class="kicker" style="color:#76e4a5">Laag 3</div><h3>Community-identiteit</h3><ul class="plain-list" style="color:#b8bec8"><li>Profiel</li><li>Expertise</li><li>Reputatie</li><li>Vaste gezichten</li><li>Ambassadeurschap</li></ul></div>
+  </div>
+</section>
+
+<section id="mijnid">
+  <div class="section-head"><div><div class="kicker">04 · Kernproduct</div><h2>Mijn ID: de persoonlijke laag over ID.nl</h2></div><p>Een account moet geen administratieve verplichting zijn, maar een product dat zichtbaar nuttiger wordt naarmate de gebruiker meer context deelt.</p></div>
+  <div class="big-idea">
+    <div class="lead">
+      <div class="kicker" style="color:#fff">Productvisie</div><h3>“ID weet wat voor mij relevant is.”</h3>
+      <p>De gebruiker kan aangeven wat hij bezit, volgt en overweegt. ID vertaalt dat naar relevante content, updates, prijsinformatie, koopmomenten, waarschuwingen en uitnodigingen.</p>
+      <div class="quote">Niet: “Maak een account.”<br>Wel: “Volg dit onderwerp”, “Bewaar dit”, “Waarschuw me”, “Dit apparaat heb ik”.</div>
+    </div>
+    <div class="feature-list">
+      <div class="feature"><div class="ico">◎</div><div><b>Ik volg</b><span>Merken, producten, dossiers, games, onderwerpen en redacteuren.</span></div></div>
+      <div class="feature"><div class="ico">▣</div><div><b>Ik heb</b><span>Een persoonlijke apparatenkast met relevante tips en updates.</span></div></div>
+      <div class="feature"><div class="ico">☆</div><div><b>Ik overweeg</b><span>Producten en categorieën waar een aankoopintentie speelt.</span></div></div>
+      <div class="feature"><div class="ico">↗</div><div><b>Ik wil weten wanneer</b><span>Prijs daalt, review verschijnt, firmware wijzigt of belangrijk nieuws uitkomt.</span></div></div>
+      <div class="feature"><div class="ico">≋</div><div><b>Mijn feed</b><span>Een logische startpagina die de algemene homepage aanvult, niet vervangt.</span></div></div>
+    </div>
+  </div>
+  <div class="prototype-cta">
+    <div class="copy"><div class="mini-kicker">Interactieve mockup</div><h3>Hoe zou Mijn ID er in de praktijk uit kunnen zien?</h3><p>Open het losse concept om de persoonlijke startpagina, navigatie, apparaten, interesses, community en meldingen te bekijken.</p></div>
+    <a href="./mijn-id.html" target="_blank" rel="noopener">Bekijk voorbeeld ↗</a>
+  </div>
+</section>
+
+<section id="bouwstenen" class="pillars">
+  <div class="section-head"><div><div class="kicker">05 · Productbouwstenen</div><h2>Vijf onderdelen die elkaar versterken</h2></div><p>Geen van deze onderdelen hoeft meteen “af” te zijn. Ze kunnen afzonderlijk getest worden en later samenkomen in Mijn ID.</p></div>
+  <div class="grid g3">
+    <div class="card"><div class="num">01</div><h3>Volgen</h3><p>De simpelste relatie: “hier wil ik meer van”.</p><ul><li>Onderwerpen</li><li>Producten</li><li>Dossiers</li><li>Redacteuren</li><li>Notificaties / digest</li></ul></div>
+    <div class="card"><div class="num">02</div><h3>Mijn apparaten</h3><p>Maak bezit de basis voor terugkerende servicecontent.</p><ul><li>Firmware & updates</li><li>Tips per apparaat</li><li>Compatibiliteit</li><li>Vervangmoment</li><li>Nieuwe relevante functies</li></ul></div>
+    <div class="card"><div class="num">03</div><h3>Vraag het ID</h3><p>Een Q&A-laag die kennisbank, redactie en lezers verbindt.</p><ul><li>Vraag stellen</li><li>Antwoord van ID</li><li>Community-antwoorden</li><li>Bestaande artikelen koppelen</li><li>Goede vragen → content</li></ul></div>
+    <div class="card"><div class="num">04</div><h3>Lezer als mede-maker</h3><p>Gebruik input niet als bijzaak, maar als journalistieke grondstof.</p><ul><li>Wat moeten we testen?</li><li>Welke bug heb jij?</li><li>Welke keuze maak jij?</li><li>Ervaringsonderzoek</li><li>Lezersdata in artikelen</li></ul></div>
+    <div class="card"><div class="num">05</div><h3>Redactie als gezicht</h3><p>Community vormt zich rond mensen, niet rond een logo.</p><ul><li>Volgbare auteurs</li><li>Expertiseprofielen</li><li>Persoonlijke keuzes</li><li>AMA / spreekuur</li><li>Herkenbare stemmen</li></ul></div>
+    <div class="card dark-card"><div class="num">+</div><h3>Project Atlas als onderlaag</h3><p>Een gestructureerde contentkennisbank kan later bestaande ID-kennis automatisch koppelen aan vragen, profielen, apparaten en dossiers.</p><ul class="plain-list" style="color:#b8bec8"><li>Entiteiten herkennen</li><li>Gerelateerde kennis vinden</li><li>FAQ's ontsluiten</li><li>Persoonlijke context koppelen</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head"><div><div class="kicker">Ecosysteem</div><h2>Van losse assets naar één vliegwiel</h2></div><p>ID hoeft dit niet volledig alleen te doen. Content, productinformatie, prijzen en gebruikerservaringen kunnen elkaar versterken.</p></div>
+  <div class="flywheel">
+    <h3>Het gewenste vliegwiel</h3><p>Meer gebruik levert meer context op; meer context maakt de ervaring persoonlijker; een betere ervaring verhoogt terugkeer en deelname.</p>
+    <div class="fly-row"><div class="fly-node">Content & dossiers</div><div class="fly-arrow">→</div><div class="fly-node">Voorkeuren & intentie</div><div class="fly-arrow">→</div><div class="fly-node">Persoonlijke waarde</div></div>
+    <div class="fly-row" style="margin-top:10px"><div class="fly-node">Reviews & ervaringen</div><div class="fly-arrow">←</div><div class="fly-node">Terugkeer & participatie</div><div class="fly-arrow">←</div><div class="fly-node">Alerts, prijzen & updates</div></div>
+  </div>
+</section>
+
+<section id="funnel">
+  <div class="section-head"><div><div class="kicker">06 · Communityfunnel</div><h2>Community is het eindpunt, niet het startpunt</h2></div><p>Elke stap vraagt slechts één extra commitment. Het ontwerp moet gebruikers geleidelijk laten opschuiven, zonder ze te dwingen.</p></div>
+  <div class="funnel">
+    <div class="stage"><b>1 · Bezoeker</b><span>Komt binnen via search, social, direct of referral.</span><div class="trigger">“Dit was nuttig”</div></div>
+    <div class="stage"><b>2 · Terugkeer</b><span>Volgt een onderwerp, product of dossier.</span><div class="trigger">“Hier wil ik meer van”</div></div>
+    <div class="stage"><b>3 · Profiel</b><span>Bewaart, volgt, vult interesses of apparaten aan.</span><div class="trigger">“ID mag dit onthouden”</div></div>
+    <div class="stage"><b>4 · Deelnemer</b><span>Stemt, reageert, stelt een vraag of doet mee aan een test.</span><div class="trigger">“Ik doe mee”</div></div>
+    <div class="stage"><b>5 · Communitylid</b><span>Heeft historie, expertise, herkenning en terugkerende relaties.</span><div class="trigger">“Mensen kennen mijn bijdrage”</div></div>
+    <div class="stage"><b>6 · Ambassadeur</b><span>Helpt anderen, deelt ID, levert tips en komt uit zichzelf terug.</span><div class="trigger">“Dit is mijn club”</div></div>
+  </div>
+</section>
+
+<section id="roadmap">
+  <div class="section-head"><div><div class="kicker">07 · Roadmap</div><h2>Van bewijs naar platform</h2></div><p>De roadmap voorkomt dat er eerst maanden techniek wordt gebouwd zonder bewijs dat gebruikers de onderliggende gedragingen daadwerkelijk willen.</p></div>
+  <div class="timeline">
+    <div class="phase one"><span class="when">0–3 maanden</span><h3>Bewijs de behoefte</h3><p class="goal">Test of bezoekers vrijwillig willen terugkomen en participeren.</p><ul><li>Volg dit onderwerp op 3 dossiers</li><li>Terugkerende “Vraag aan jullie”</li><li>Community-achtige nieuwsbrief</li><li>Eventtracking op interacties</li><li>Baseline Returning Engaged Users</li></ul></div>
+    <div class="phase two"><span class="when">3–6 maanden</span><h3>Bouw de basis</h3><p class="goal">Maak succesvolle gedragingen persistent en persoonlijk.</p><ul><li>Licht Mijn ID-profiel</li><li>Bewaren & volgen</li><li>Persoonlijke digest</li><li>Eerste productalerts koppelen</li><li>Auteurs / expertises volgen</li></ul></div>
+    <div class="phase three"><span class="when">6–12 maanden</span><h3>Maak deelname zichtbaar</h3><p class="goal">Verbind contentconsumptie aan actieve bijdragen en expertise.</p><ul><li>Vraag het ID</li><li>Community-antwoorden</li><li>Mijn apparaten</li><li>Testpanel integreren</li><li>Profielen & historie</li></ul></div>
+    <div class="phase four"><span class="when">12+ maanden</span><h3>Laat het ecosysteem werken</h3><p class="goal">Bouw een moeilijk kopieerbare persoonlijke combinatie van content, producten en community.</p><ul><li>Reputatie / expertise</li><li>Slimme Atlas-koppelingen</li><li>Prijs + content + bezit</li><li>Persoonlijke homepage</li><li>Ambassadeursprogramma</li></ul></div>
+  </div>
+</section>
+
+<section id="kpis">
+  <div class="section-head"><div><div class="kicker">08 · Meetmodel</div><h2>North Star: Returning Engaged Users</h2></div><p>Accounts en reacties zijn middelen, geen einddoel. De kernvraag is hoeveel mensen ID vrijwillig opnieuw bezoeken én bewust iets doen.</p></div>
+  <div class="northstar">
+    <div><div class="kicker">North Star Metric</div><div class="metric">REU</div><p><b>Returning Engaged Users</b>: gebruikers die ID op meerdere dagen binnen een maand bezoeken én minimaal één betekenisvolle interactie uitvoeren.</p></div>
+    <div class="formula"><b>Voorstel definitie</b><br><br>Unieke gebruiker<br>+ bezoek op ≥ 3 verschillende dagen / maand<br>+ ≥ 1 bewuste interactie<div class="chips"><span class="chip">volgen</span><span class="chip">bewaren</span><span class="chip">alert</span><span class="chip">stemmen</span><span class="chip">vragen</span><span class="chip">reageren</span><span class="chip">testdeelname</span></div></div>
+  </div>
+  <div class="tablewrap" style="margin-top:18px"><table><thead><tr><th>Doel</th><th>KPI</th><th>Waarom</th><th>Fase</th></tr></thead><tbody>
+    <tr><td>Terugkeer</td><td>7/30-day return rate</td><td>Meet of ID een gewoonte begint te worden.</td><td><span class="status now">Nu</span></td></tr>
+    <tr><td>Voorkeur</td><td>Follow / save rate</td><td>Bewijst bereidheid om een toekomstige relatie aan te gaan.</td><td><span class="status now">Nu</span></td></tr>
+    <tr><td>Participatie</td><td>Acties per 1.000 bezoekers</td><td>Maakt engagement vergelijkbaar tussen formats en dossiers.</td><td><span class="status now">Nu</span></td></tr>
+    <tr><td>Profielwaarde</td><td>% profielen met ≥ 3 signalen</td><td>Laat zien of personalisatie genoeg context kan verzamelen.</td><td><span class="status next">Volgende fase</span></td></tr>
+    <tr><td>Communitygezondheid</td><td>% actieve bijdragers dat terugkeert</td><td>Voorkomt focus op eenmalige reacties of lege accounts.</td><td><span class="status next">Volgende fase</span></td></tr>
+    <tr><td>Ambassadeurs</td><td>Helpful contributions / shares</td><td>Meet of leden daadwerkelijk waarde voor anderen toevoegen.</td><td><span class="status later">Later</span></td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="experimenten" class="experiments">
+  <div class="section-head"><div><div class="kicker">09 · Eerste experimenten</div><h2>Drie tests vóór grote ontwikkeling</h2></div><p>Doel van de eerste 90 dagen: aantonen dat de gewenste gedragingen bestaan en leren welke propositie mensen voldoende waardevol vinden.</p></div>
+  <div class="grid g3">
+    <div class="card"><div class="exp-no">01</div><h3>Volg dit onderwerp</h3><p>Test op drie sterke dossiers, bijvoorbeeld een merk/productdossier, gamingdossier en praktisch smart-livingdossier. Laat volgen direct iets opleveren: e-maildigest of notificatie.</p><div class="testline"><b>Bewijs:</b> follow-rate, return-rate van volgers versus niet-volgers, uitschrijvingen.</div></div>
+    <div class="card"><div class="exp-no">02</div><h3>Vraag aan jullie</h3><p>Plaats structureel één relevante vraag in artikelen en op de homepage. Verwerk de beste input aantoonbaar in vervolgcontent en verwijs terug naar de deelnemers.</p><div class="testline"><b>Bewijs:</b> response-rate, kwaliteit input, aandeel terugkerende deelnemers.</div></div>
+    <div class="card"><div class="exp-no">03</div><h3>De ID-clubbrief</h3><p>Maak van de nieuwsbrief geen linkdump, maar een terugkerend redactioneel ritueel met vragen, keuzes, lezerstips, testoproepen, vooruitblik en persoonlijke stemmen.</p><div class="testline"><b>Bewijs:</b> open/click, directe terugkeer, participatie vanuit nieuwsbrief.</div></div>
+  </div>
+</section>
+
+<section id="business">
+  <div class="section-head"><div><div class="kicker">10 · Businesswaarde</div><h2>Waarom dit meer is dan engagement</h2></div><p>Een vaste gebruikersbasis heeft redactionele én commerciële waarde, zolang het productvoordeel voor de gebruiker leidend blijft.</p></div>
+  <div class="value-grid">
+    <div class="valuebox">
+      <h3>Waarde voor ID.nl</h3>
+      <div class="value-row"><div class="mark">↻</div><div><b>Meer direct en terugkerend verkeer</b><p>Minder afhankelijkheid van één acquisitiekanaal en meer bereik dat ID zelf kan activeren.</p></div></div>
+      <div class="value-row"><div class="mark">◎</div><div><b>Betere first-party signalen</b><p>Niet alleen wat iemand leest, maar ook wat iemand volgt, bezit, overweegt en belangrijk vindt.</p></div></div>
+      <div class="value-row"><div class="mark">✦</div><div><b>Sterkere contentfeedback</b><p>Vragen, polls en gebruikssignalen maken duidelijk welke problemen en onderwerpen werkelijk leven.</p></div></div>
+      <div class="value-row"><div class="mark">€</div><div><b>Meer relevante commerciële momenten</b><p>Prijsalerts, koopintentie en productcontext maken commerciële proposities specifieker — zonder de redactionele relatie te ondermijnen.</p></div></div>
+    </div>
+    <div class="valuebox ecosystem">
+      <h3>Potentiële ecosysteempositie</h3><p>Op langere termijn kan Mijn ID de natuurlijke persoonlijke laag worden tussen content, productkeuze en gebruikerservaring.</p>
+      <div class="eco"><div><b>ID.nl</b>begrijpen & gebruiken</div><div><b>Kieskeurig</b>vergelijken & prijzen</div><div><b>Review.nl</b>testen & ervaren</div></div>
+      <p style="margin-top:18px"><b style="color:#fff">Strategische belofte:</b><br>één gebruiker, één context, meerdere nuttige momenten.</p>
+    </div>
+  </div>
+</section>
+
+<section id="risicos">
+  <div class="section-head"><div><div class="kicker">11 · Risico's & guardrails</div><h2>Wat we bewust níét moeten doen</h2></div><p>Communityproducten mislukken vaak niet door gebrek aan features, maar doordat ze te groot starten, te weinig directe waarde bieden of intern geen eigenaarschap hebben.</p></div>
+  <div class="card">
+    <div class="risk"><div><span class="tag">Risico</span><br><b>Leeg forum-syndroom</b></div><p>Een aparte communityruimte zonder bestaande gedragsstroom voelt snel verlaten.</p><p class="guard"><b>Guardrail:</b> interactie eerst ín bestaande artikelen, dossiers, reviews en nieuwsbrieven.</p></div>
+    <div class="risk"><div><span class="tag">Risico</span><br><b>Registratiefrictie</b></div><p>Te vroeg om een account vragen verlaagt conversie en maakt waarde abstract.</p><p class="guard"><b>Guardrail:</b> elke registratievraag koppelen aan direct zichtbaar voordeel.</p></div>
+    <div class="risk"><div><span class="tag">Risico</span><br><b>Moderatiekosten</b></div><p>Open reacties kunnen snel operationele en reputatierisico's creëren.</p><p class="guard"><b>Guardrail:</b> begin met begrensde formats, Q&A en polls; schaal open discussie pas met moderatiecapaciteit.</p></div>
+    <div class="risk"><div><span class="tag">Risico</span><br><b>Feature-overload</b></div><p>Te veel functies tegelijk maakt zowel ontwikkeling als boodschap onduidelijk.</p><p class="guard"><b>Guardrail:</b> één gedragsvraag per fase en alleen opschalen bij aantoonbaar gebruik.</p></div>
+    <div class="risk"><div><span class="tag">Risico</span><br><b>Commercie te vroeg</b></div><p>Als personalisatie vooral als advertentie-instrument voelt, daalt vertrouwen.</p><p class="guard"><b>Guardrail:</b> persoonlijke utility en redactionele relevantie eerst; monetisatie volgt uit bewezen waarde.</p></div>
+  </div>
+</section>
+
+<section id="besluit">
+  <div class="decision">
+    <div class="kicker" style="color:#fff">12 · Besluit voor nu</div><h2>Nog geen communityplatform bouwen.</h2>
+    <p>Start met drie gedragsproeven die aantonen of bezoekers een relatie met ID willen: volgen, meedoen en terugkeren. Gebruik de uitkomst om Mijn ID daarna gericht — en veel minder risicovol — op te bouwen.</p>
+    <div class="decision-grid"><div class="decision-card"><small>Stap 1</small><b>Meet de baseline</b><span>Definieer REU en bestaande return-rates.</span></div><div class="decision-card"><small>Stap 2</small><b>Start drie experimenten</b><span>Volgen, “Vraag aan jullie”, clubbrief.</span></div><div class="decision-card"><small>Stap 3</small><b>Beslis na 90 dagen</b><span>Welke gedraging verdient productontwikkeling?</span></div></div>
+  </div>
+</section>
+
+<footer><span>ID.nl · Businessplan Community & Loyaliteit · concept</span><span>Strategische kern: nut → participatie → identiteit</span></footer>
+</div></main></div>
+<script>
+const bar=document.getElementById('progress');
+addEventListener('scroll',()=>{const d=document.documentElement;const p=d.scrollTop/(d.scrollHeight-d.clientHeight)*100;bar.style.width=p+'%'});
+</script>
+</body>
+</html>
