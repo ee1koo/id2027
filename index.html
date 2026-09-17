@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>ID.nl — Businessplan Community & Loyaliteit</title>
-<meta name="description" content="Businessplan voor het bouwen van een terugkerende ID.nl-community: van toevallige bezoeker naar betrokken gebruiker." />
+<title>Mijn ID — van bereik naar relatie</title>
+<meta name="description" content="Strategie voor Mijn ID als persoonlijke voordeur naar ID.nl, Kieskeurig.nl en Review.nl, met Project Atlas als intelligentielaag." />
 <style>
 :root{
   --bg:#f6f7f9; --paper:#ffffff; --ink:#101114; --muted:#6a6f7a; --line:#e5e7eb;
@@ -74,220 +74,199 @@ footer{padding:28px 4px;color:#8a9099;font-size:11px;display:flex;justify-conten
 @media(max-width:980px){.shell{display:block}aside{position:relative;height:auto}.nav{display:flex;gap:6px;overflow:auto}.navlabel,.aside-note{display:none}.nav a{white-space:nowrap}.wrap{padding:24px}.progress{left:0}.g3,.g4,.timeline{grid-template-columns:1fr 1fr}.big-idea,.northstar,.value-grid{grid-template-columns:1fr}.topic-gallery{grid-template-columns:1fr 1fr}.fly-row{grid-template-columns:1fr}.fly-arrow{transform:rotate(90deg)}.stage{grid-template-columns:90px 1fr}.stage .trigger{grid-column:2}.stage:nth-child(n){margin-left:0;margin-right:0}}
 @media(max-width:680px){.prototype-cta{display:block}.prototype-cta a{display:inline-block;margin-top:14px}.hero{padding:34px 24px;min-height:auto}.hero p{font-size:17px}.wrap{padding:14px}.visual-intro{grid-template-columns:1fr}.visual-intro .photo-panel{min-height:205px}.topic-gallery .photo-panel{min-height:145px}.photo-panel figcaption strong{font-size:17px}.g2,.g3,.g4,.timeline,.decision-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}.stage{grid-template-columns:1fr}.stage .trigger{grid-column:1}.metric{font-size:42px}.eco{grid-template-columns:1fr}.risk{grid-template-columns:1fr}footer{display:block}}
 @media print{aside,.progress{display:none}.shell{display:block}.wrap{max-width:none;padding:0}.hero{break-after:page}.card,.phase,.flow,.northstar,.decision,.valuebox{break-inside:avoid;box-shadow:none}body{background:#fff}.hero{border-radius:0}}
+
+.architecture{display:grid;grid-template-columns:1fr;gap:12px}.arch-layer{border:1px solid var(--line);border-radius:18px;padding:20px 24px;background:#fff}.arch-layer strong{display:block;font-size:18px}.arch-layer p{margin:5px 0 0;color:var(--muted);font-size:13px}.arch-layer.top{background:#e9f9ef;border-color:#b9e8ca}.arch-layer.base{background:var(--dark);color:#fff;border-color:var(--dark)}.arch-layer.base p{color:#c9d2df}.arch-services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.arch-services .arch-layer{min-height:125px}.arch-arrow{text-align:center;color:var(--brand-dark);font-weight:900}.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.journey div{background:#fff;border:1px solid var(--line);border-radius:15px;padding:15px;font-size:13px}.journey b{display:block;color:var(--brand-dark);margin-bottom:6px}.brand-label{font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-dark)}.metric-callout{margin-top:15px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;font-size:13px;color:#4c535d}.metric-callout b{color:var(--ink)}
+@media(max-width:700px){.arch-services,.journey{grid-template-columns:1fr}}
+
+/* Opening: vier hoofdstukken met elk een eigen visuele vorm. */
+.editorial-opening{display:grid;grid-template-columns:1.08fr .92fr;min-height:390px;overflow:hidden;border-radius:28px;background:var(--dark);color:#fff;box-shadow:var(--shadow)}
+.editorial-opening .statement{padding:42px;display:flex;flex-direction:column;justify-content:space-between}
+.editorial-opening .statement .overline{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:#8fe9b3;font-weight:900}
+.editorial-opening .statement strong{display:block;font-size:clamp(34px,4vw,56px);line-height:1.04;letter-spacing:-.05em;margin:22px 0}
+.editorial-opening .statement p{color:#d8e0e7;font-size:15px;max-width:540px;margin:0}
+.editorial-opening .statement .signature{border-top:1px solid rgba(255,255,255,.2);padding-top:18px;margin-top:28px;color:#a4efbf;font-weight:800;font-size:13px}
+.editorial-opening figure{position:relative;margin:0;min-height:390px;overflow:hidden}
+.editorial-opening img{width:100%;height:100%;object-fit:cover;display:block}
+.editorial-opening figure:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(37,45,80,.15),transparent 48%),linear-gradient(0deg,rgba(10,20,35,.75),transparent 52%)}
+.editorial-opening figcaption{position:absolute;z-index:1;bottom:24px;left:26px;right:26px;font-size:13px;color:#fff;font-weight:700}
+.editorial-opening figcaption span{display:block;text-transform:uppercase;letter-spacing:.14em;color:#9ee9b9;font-size:10px;margin-bottom:5px}
+.relationship-chart{border-radius:26px;background:#fff;border:1px solid var(--line);padding:30px 32px;box-shadow:0 6px 22px rgba(10,15,25,.035)}
+.relationship-chart .chart-row{display:grid;grid-template-columns:135px minmax(0,1fr) 240px;align-items:center;gap:18px;padding:17px 0}
+.relationship-chart .chart-row+.chart-row{border-top:1px solid var(--line)}
+.relationship-chart .chart-label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:900;color:#777e8a}
+.relationship-chart .chart-label.future{color:#19754b}
+.relationship-chart .chart-line{display:flex;align-items:center;min-width:0;gap:5px}
+.relationship-chart .chart-node{display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:9px 11px;min-height:46px;border-radius:10px;background:#f1f3f5;color:#334050;font-size:12px;font-weight:800;flex:1}
+.relationship-chart .chart-arrow{font-size:18px;color:#adb5bd;flex:none}
+.relationship-chart .chart-row:nth-child(2) .chart-node{background:#e5f7ec;color:#166e45}
+.relationship-chart .chart-row:nth-child(2) .chart-arrow{color:#26ab6a}
+.relationship-chart .chart-end{font-size:13px;color:#707783;line-height:1.4}
+.relationship-chart .chart-row:nth-child(2) .chart-end{color:#19754b;font-weight:800}
+.chart-caption{font-size:12px;color:#777e8a;margin:14px 0 0}
+.service-ribbon{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:var(--dark);color:#fff;border-radius:26px;overflow:hidden;box-shadow:var(--shadow)}
+.service-ribbon article{position:relative;padding:31px 28px 30px;min-height:315px}
+.service-ribbon article+article{border-left:1px solid rgba(255,255,255,.17)}
+.service-ribbon .service-num{font-size:11px;letter-spacing:.14em;color:#8fe9b3;font-weight:900}
+.service-ribbon h3{font-size:27px;letter-spacing:-.04em;margin:40px 0 7px}
+.service-ribbon .service-verb{font-size:15px;color:#8fe9b3;font-weight:800;margin:0 0 12px}
+.service-ribbon p{font-size:13px;line-height:1.55;color:#c6d0db;margin:0}
+.service-ribbon .service-tail{position:absolute;left:28px;right:28px;bottom:26px;border-top:1px solid rgba(255,255,255,.17);padding-top:12px;font-size:11px;color:#d7e3ec;font-weight:700}
+.service-ribbon article:nth-child(2){background:#30456a}.service-ribbon article:nth-child(3){background:#295744}
+.bridge-note{margin-top:15px;border-left:4px solid var(--id);padding:8px 0 8px 17px;color:#525d65;font-size:14px;max-width:870px}
+.bridge-note b{color:var(--ink)}
+.architecture-graphic{position:relative;background:linear-gradient(145deg,#f9fcfa,#eef7f0);border:1px solid #d7e9dd;border-radius:28px;padding:30px 34px;overflow:hidden}
+.architecture-graphic:before{content:"";position:absolute;width:430px;height:430px;border:1px solid #dcefe2;border-radius:50%;right:-155px;top:-240px;box-shadow:0 0 0 46px rgba(85,215,138,.045),0 0 0 95px rgba(85,215,138,.03)}
+.architecture-graphic>*{position:relative}
+.architecture-graphic .graphic-top{text-align:center;background:#fff;border:2px solid #64d994;border-radius:18px;padding:18px 22px;max-width:560px;margin:auto;box-shadow:0 8px 24px rgba(29,103,62,.08)}
+.architecture-graphic .graphic-top strong{font-size:23px;letter-spacing:-.035em}.architecture-graphic p{margin:5px 0 0;font-size:12px;color:#69727b;line-height:1.5}
+.architecture-graphic .connector{height:24px;width:2px;background:#75c994;margin:auto}
+.architecture-graphic .graphic-services{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:880px;margin:auto}
+.architecture-graphic .graphic-services div{background:#fff;border:1px solid #d4e3d9;border-radius:14px;text-align:center;padding:17px 14px}
+.architecture-graphic .graphic-services strong{display:block;font-size:16px}
+.architecture-graphic .graphic-atlas{background:var(--dark);color:#fff;border-radius:18px;padding:20px 25px;text-align:center;max-width:880px;margin:auto}
+.architecture-graphic .graphic-atlas strong{font-size:20px;letter-spacing:-.03em}
+.architecture-graphic .graphic-atlas p{color:#c9d6dd}
+.architecture-graphic .graphic-foundation{text-align:center;font-size:11px;color:#67766f;margin-top:15px;font-weight:800;letter-spacing:.025em}
+.architecture-graphic .graphic-legend{position:absolute;right:32px;top:30px;color:#26805a;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.12em}
+.architecture-example{margin-top:16px;display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.architecture-example img{width:100%;height:100%;min-height:140px;object-fit:cover}
+.architecture-example p{margin:0;padding:18px 20px 18px 0;color:#606974;font-size:13px;line-height:1.6}
+.architecture-example b{color:var(--ink)}
+@media(max-width:980px){.relationship-chart .chart-row{grid-template-columns:100px 1fr}.relationship-chart .chart-end{grid-column:2}.service-ribbon article{min-height:345px}}
+@media(max-width:700px){.editorial-opening{grid-template-columns:1fr}.editorial-opening .statement{padding:28px}.editorial-opening figure{min-height:220px;max-height:280px}.relationship-chart{padding:19px}.relationship-chart .chart-row{grid-template-columns:1fr;gap:10px}.relationship-chart .chart-end{grid-column:1}.relationship-chart .chart-node{font-size:10px;padding:7px 5px}.relationship-chart .chart-arrow{font-size:12px}.service-ribbon{grid-template-columns:1fr}.service-ribbon article{min-height:280px;padding:25px}.service-ribbon article+article{border-left:0;border-top:1px solid rgba(255,255,255,.17)}.service-ribbon h3{margin-top:20px}.service-ribbon .service-tail{left:25px;right:25px;bottom:20px}.architecture-graphic{padding:22px}.architecture-graphic .graphic-legend{position:static;text-align:center;margin-bottom:12px}.architecture-graphic .graphic-services{grid-template-columns:1fr}.architecture-graphic .connector{height:17px}.architecture-example{grid-template-columns:1fr}.architecture-example img{height:170px;min-height:0}.architecture-example p{padding:0 18px 19px}}
+
 </style>
 </head>
 <body>
 <div class="progress" id="progress"></div>
 <div class="shell">
 <aside>
-  <div class="brand"><div class="logo">ID</div><div><b>ID.nl</b><small>Community & loyaliteit</small></div></div>
-  <div class="navlabel">Businessplan</div>
-  <nav class="nav">
+  <div class="brand"><div class="logo">ID</div><div><b>Mijn ID</b><small>Van bereik naar relatie</small></div></div>
+  <div class="navlabel">Businessplan · versie 2</div>
+  <nav class="nav" aria-label="Inhoud">
     <a href="#samenvatting"><strong>01</strong> Samenvatting</a>
     <a href="#probleem"><strong>02</strong> Probleem & kans</a>
-    <a href="#strategie"><strong>03</strong> Strategie</a>
-    <a href="#mijnid"><strong>04</strong> Mijn ID</a>
-    <a href="#bouwstenen"><strong>05</strong> Bouwstenen</a>
-    <a href="#funnel"><strong>06</strong> Communityfunnel</a>
-    <a href="#roadmap"><strong>07</strong> Roadmap</a>
-    <a href="#kpis"><strong>08</strong> KPI's</a>
-    <a href="#experimenten"><strong>09</strong> Experimenten</a>
-    <a href="#business"><strong>10</strong> Businesswaarde</a>
-    <a href="#risicos"><strong>11</strong> Risico's</a>
-    <a href="#besluit"><strong>12</strong> Eerste besluit</a>
+    <a href="#strategie"><strong>03</strong> Strategisch model</a>
+    <a href="#architectuur"><strong>04</strong> Architectuur</a>
+    <a href="#mijnid"><strong>05</strong> Mijn ID</a>
+    <a href="#diensten"><strong>06</strong> Diensten</a>
+    <a href="#reis"><strong>07</strong> Gebruikersreis</a>
+    <a href="#roadmap"><strong>08</strong> Roadmap</a>
+    <a href="#kpis"><strong>09</strong> KPI's</a>
+    <a href="#experimenten"><strong>10</strong> Experimenten</a>
+    <a href="#business"><strong>11</strong> Businesswaarde</a>
+    <a href="#risicos"><strong>12</strong> Waarborgen</a>
+    <a href="#besluit"><strong>13</strong> Besluit</a>
   </nav>
-  <div class="aside-note"><b>Strategisch uitgangspunt</b>Niet beginnen met een forum. Eerst redenen bouwen om uit jezelf terug te komen. Daarna participatie, identiteit en reputatie toevoegen.</div>
+  <div class="aside-note"><b>De kern</b>Project Atlas verbindt kennis, producten en ervaringen. Mijn ID maakt die verbanden bruikbaar voor één persoon, op het juiste moment.</div>
 </aside>
 <main><div class="wrap">
+<header class="hero"><div class="hero-inner">
+  <span class="eyebrow"><span class="dot"></span> Strategie · concept v2.0</span>
+  <h1>Van bereik naar relatie.</h1>
+  <p>Mijn ID wordt de persoonlijke voordeur naar ID.nl, Kieskeurig.nl en Review.nl. Project Atlas verbindt de kennis achter die diensten, zodat één account steeds opnieuw concrete waarde levert.</p>
+  <div class="thesis">Project Atlas verbindt <em>onze kennis</em>. Mijn ID verbindt <em>onze gebruikers</em> eraan.</div>
+  <div class="meta"><span>Drie merken · één gebruikersrelatie</span><i></i><span>Horizon: 12+ maanden</span><i></i><span>Fasegewijs te toetsen</span></div>
+</div></header>
 
-<header class="hero">
-  <div class="hero-inner">
-    <span class="eyebrow"><span class="dot"></span> Businessplan · concept v1.0</span>
-    <h1>Van toevallige bezoeker naar vaste ID-gebruiker.</h1>
-    <p>Een strategie om ID.nl minder afhankelijk te maken van incidenteel zoekverkeer en stap voor stap een loyale, actieve en waardevolle gebruikersbasis op te bouwen.</p>
-    <div class="thesis">Bouw niet eerst een community. Bouw eerst <em>redenen om terug te komen</em>. De community ontstaat daar vervolgens omheen.</div>
-    <div class="meta"><span>Strategie: community & loyaliteit</span><i></i><span>Horizon: 12+ maanden</span><i></i><span>Focus: eerst gedrag, daarna platform</span></div>
-  </div>
-</header>
-
-<div class="visual-intro" aria-label="Sfeerbeelden bij het businessplan">
-  <figure class="photo-panel"><img src="assets/images/redactie.avif" alt="Camera en tablet op een werkplek voor digitale media" width="1470" height="980"><figcaption><small>Redactionele kracht · sfeerbeeld</small><strong>Kennis en herkenbare makers als vertrekpunt</strong></figcaption></figure>
-  <figure class="photo-panel"><img src="assets/images/gaming.avif" alt="Gamecontroller in blauw en rood neonlicht" width="735" height="490"><figcaption><small>Onderwerpen die leven</small><strong>Van tech tot gaming: redenen om terug te komen</strong></figcaption></figure>
-</div>
 
 <section id="samenvatting">
-  <div class="section-head"><div><div class="kicker">01 · Samenvatting</div><h2>De strategie in één oogopslag</h2></div><p>ID.nl moet niet primair proberen ‘een community te lanceren’, maar een productrelatie opbouwen waarin bezoekers steeds meer reden krijgen om terug te keren, mee te doen en zich met het merk te identificeren.</p></div>
-  <div class="grid g3">
-    <div class="card accent-card"><div class="num">1</div><h3>Nut</h3><p>Maak terugkomen functioneel waardevol met volgen, bewaren, meldingen, persoonlijke aanbevelingen en een eigen apparatenprofiel.</p></div>
-    <div class="card"><div class="num">2</div><h3>Participatie</h3><p>Laat bezoekers laagdrempelig stemmen, vragen stellen, testen, ervaringen delen en invloed hebben op journalistieke keuzes.</p></div>
-    <div class="card dark-card"><div class="num">3</div><h3>Identiteit</h3><p>Voeg daarna herkenning, profielen, expertise, reputatie en vaste gezichten toe. Dan ontstaat het gevoel: ‘Dit is mijn plek.’</p></div>
+  <div class="section-head"><div><div class="kicker">01 · De belofte</div><h2>Eén relatie. Drie redenen om terug te komen.</h2></div><p>De kern van het plan in één beeld: Mijn ID maakt de kennis van ID.nl, de koophulp van Kieskeurig.nl en de ervaringen van Review.nl persoonlijk bruikbaar.</p></div>
+  <div class="editorial-opening">
+    <div class="statement"><div><div class="overline">Strategische kern</div><strong>Van losse bezoeken naar een doorlopende relatie.</strong><p>Wat iemand volgt, bezit, bewaart en ervaart krijgt een plek in Mijn ID. Project Atlas legt de verbanden en maakt de volgende stap begrijpelijk.</p></div><div class="signature">Project Atlas verbindt onze kennis. Mijn ID verbindt mensen eraan.</div></div>
+    <figure><img src="assets/images/smart-home.avif" alt="Bedieningspaneel voor een slim huis aan de muur" width="1470" height="980"><figcaption><span>Eén persoonlijke context</span>Jouw situatie bepaalt wat vandaag nuttig is.</figcaption></figure>
   </div>
 </section>
 
 <section id="probleem">
-  <div class="section-head"><div><div class="kicker">02 · Probleem & kans</div><h2>Van zoekmoment naar relatie</h2></div><p>De huidige waarde ontstaat vooral op het moment dat iemand een antwoord zoekt. De nieuwe waarde ontstaat wanneer ID de context, interesses en intentie van die bezoeker mag onthouden.</p></div>
-  <div class="flow">
-    <div class="flowbox"><div class="flowtitle">Vandaag</div><div class="flowline">Google → artikel → antwoord → weg</div></div>
-    <div class="arrow">→</div>
-    <div class="flowbox good"><div class="flowtitle">Gewenst</div><div class="flowline">Google → waarde → voorkeur → terugkeer → deelname</div></div>
+  <div class="section-head"><div><div class="kicker">02 · De verschuiving</div><h2>Een antwoord is nog geen relatie.</h2></div><p>De huidige reis stopt vaak zodra een vraag is beantwoord. Een persoonlijke dienst kan daarna op het juiste moment opnieuw waarde leveren.</p></div>
+  <div class="relationship-chart" role="img" aria-label="Conceptueel schema: vandaag loopt de reis van zoeken naar artikel en vertrek; de ambitie verbindt ontdekken, volgen, kiezen, ervaren en bijdragen tot terugkeer.">
+    <div class="chart-row"><span class="chart-label">Vandaag</span><div class="chart-line"><span class="chart-node">Zoeken</span><span class="chart-arrow">→</span><span class="chart-node">Artikel</span><span class="chart-arrow">→</span><span class="chart-node">Antwoord</span></div><span class="chart-end">De relatie eindigt vaak bij vertrek.</span></div>
+    <div class="chart-row"><span class="chart-label future">Ambitie</span><div class="chart-line"><span class="chart-node">Ontdekken</span><span class="chart-arrow">→</span><span class="chart-node">Volgen</span><span class="chart-arrow">→</span><span class="chart-node">Kiezen</span><span class="chart-arrow">→</span><span class="chart-node">Ervaren</span></div><span class="chart-end">Bijdragen maakt de volgende keuze beter.</span></div>
   </div>
-  <div class="grid g4" style="margin-top:18px">
-    <div class="card"><h3>Afhankelijkheid</h3><p>Bereik moet telkens opnieuw worden verworven via distributie, zoekmachines en algoritmes.</p></div>
-    <div class="card"><h3>Weinig geheugen</h3><p>De site weet nauwelijks wat een bezoeker bezit, volgt, overweegt of eerder nuttig vond.</p></div>
-    <div class="card"><h3>Veel onbenut gedrag</h3><p>Lezers lezen al reviews, koopgidsen, dossiers en tips — maar dat gedrag wordt nog weinig verbonden.</p></div>
-    <div class="card"><h3>Sterke uitgangspositie</h3><p>Redactionele expertise, dossiers, reviews, prijzen, tests en productkennis lenen zich juist goed voor herhaalgebruik.</p></div>
-  </div>
+  <p class="chart-caption">Conceptueel schema van de gebruikersreis; de vorm toont geen gemeten percentages of omzetverwachting.</p>
 </section>
 
 <section id="strategie">
-  <div class="section-head"><div><div class="kicker">03 · Strategisch model</div><h2>Drie lagen die op elkaar voortbouwen</h2></div><p>De volgorde is belangrijk. Wie te vroeg om deelname of registratie vraagt, creëert frictie. Wie eerst persoonlijke waarde levert, verdient toestemming voor een diepere relatie.</p></div>
-  <div class="grid g3">
-    <div class="card"><div class="kicker">Laag 1</div><h3>Persoonlijk nut</h3><ul class="plain-list"><li>Volgen</li><li>Bewaren</li><li>Prijs- en artikelmeldingen</li><li>Persoonlijke feed</li><li>Mijn apparaten</li></ul></div>
-    <div class="card"><div class="kicker">Laag 2</div><h3>Participatie</h3><ul class="plain-list"><li>Polls</li><li>Vragen</li><li>Testoproepen</li><li>Ervaringen</li><li>Inbreng van lezers in artikelen</li></ul></div>
-    <div class="card dark-card"><div class="kicker" style="color:#76e4a5">Laag 3</div><h3>Community-identiteit</h3><ul class="plain-list" style="color:#b8bec8"><li>Profiel</li><li>Expertise</li><li>Reputatie</li><li>Vaste gezichten</li><li>Ambassadeurschap</li></ul></div>
+  <div class="section-head"><div><div class="kicker">03 · De rollen</div><h2>Een reis door drie merken.</h2></div><p>Elk merk levert een herkenbaar soort waarde. Samen kunnen ze dezelfde gebruiker op meerdere momenten helpen.</p></div>
+  <div class="service-ribbon" aria-label="De rol van de drie merken">
+    <article><span class="service-num">01 · ONTDEKKEN</span><h3>ID.nl</h3><p class="service-verb">Begrijpen & gebruiken</p><p>Artikelen, uitleg, dossiers en redactionele vragen helpen bij een behoefte of probleem.</p><div class="service-tail">Signaal: wat ik wil weten</div></article>
+    <article><span class="service-num">02 · KIEZEN</span><h3>Kieskeurig.nl</h3><p class="service-verb">Vergelijken & slim kopen</p><p>Producten, prijzen, Price Alerts en Smart Buyers Club maken de volgende keuze concreet.</p><div class="service-tail">Signaal: wat ik overweeg</div></article>
+    <article><span class="service-num">03 · ERVAREN</span><h3>Review.nl</h3><p class="service-verb">Testen & bijdragen</p><p>Testpanels en reviews geven gebruikservaring een plek en helpen de volgende koper.</p><div class="service-tail">Signaal: wat ik heb ervaren</div></article>
   </div>
+  <p class="bridge-note"><b>Mijn ID</b> is de persoonlijke voordeur voor deze hele reis. Community ontstaat in de handelingen ertussen: vragen, testen, beoordelen en anderen helpen.</p>
+</section>
+
+<section id="architectuur">
+  <div class="section-head"><div><div class="kicker">04 · De werking</div><h2>Atlas maakt de verbinding.</h2></div><p>De architectuur blijft leesbaar als één systeem: een persoonlijke ervaring bovenop drie diensten, verbonden door een gedeelde intelligentielaag.</p></div>
+  <div class="architecture-graphic" role="img" aria-label="Architectuur: Mijn ID als persoonlijke voordeur, daaronder ID.nl, Kieskeurig.nl en Review.nl, verbonden door Project Atlas en ondersteund door account, toestemming en brondata.">
+    <div class="graphic-legend">Van bron naar relevantie</div>
+    <div class="graphic-top"><strong>Mijn ID</strong><p>Persoonlijk overzicht · voorkeuren · apparaten · bewaard · meldingen · bijdragen</p></div>
+    <div class="connector"></div>
+    <div class="graphic-services"><div><strong>ID.nl</strong><p>Kennis & redactie</p></div><div><strong>Kieskeurig.nl</strong><p>Producten & prijzen</p></div><div><strong>Review.nl</strong><p>Tests & ervaringen</p></div></div>
+    <div class="connector"></div>
+    <div class="graphic-atlas"><strong>Project Atlas</strong><p>Herkent producten en onderwerpen, legt relaties, rangschikt relevantie en toont herkomst.</p></div>
+    <div class="graphic-foundation">Fundament: gedeelde login · toestemming · brondata · API's · datakwaliteit</div>
+  </div>
+  <div class="architecture-example"><img src="assets/images/thuisbatterij.avif" alt="Installatie voor energieopslag in een woning" loading="lazy" width="774" height="516"><p><b>Zo voelt dat voor de gebruiker:</b> je bewaart een ID-koopgids over thuisbatterijen. Mijn ID toont passende producten en prijsinformatie via Kieskeurig.nl en relevante ervaringen of testkansen via Review.nl. Atlas legt uit waarom die combinatie verschijnt. De gebruiker kan de signalen aanpassen.</p></div>
 </section>
 
 <section id="mijnid">
-  <div class="section-head"><div><div class="kicker">04 · Kernproduct</div><h2>Mijn ID: de persoonlijke laag over ID.nl</h2></div><p>Een account moet geen administratieve verplichting zijn, maar een product dat zichtbaar nuttiger wordt naarmate de gebruiker meer context deelt.</p></div>
-  <div class="big-idea">
-    <div class="lead">
-      <div class="kicker" style="color:#fff">Productvisie</div><h3>‘ID weet wat voor mij relevant is.’</h3>
-      <p>De gebruiker kan aangeven wat hij bezit, volgt en overweegt. ID vertaalt dat naar relevante artikelen, updates, prijsinformatie, koopmomenten, waarschuwingen en uitnodigingen.</p>
-      <div class="quote">Niet: ‘Maak een account.’<br>Wel: ‘Volg dit onderwerp’, ‘Bewaar dit’, ‘Waarschuw me’ of ‘Dit apparaat heb ik’.</div>
-    </div>
-    <div class="feature-list">
-      <div class="feature"><div class="ico">◎</div><div><b>Ik volg</b><span>Merken, producten, dossiers, games, onderwerpen en redacteuren.</span></div></div>
-      <div class="feature"><div class="ico">▣</div><div><b>Ik heb</b><span>Een persoonlijke apparatenkast met relevante tips en updates.</span></div></div>
-      <div class="feature"><div class="ico">☆</div><div><b>Ik overweeg</b><span>Producten en categorieën waar een aankoopintentie speelt.</span></div></div>
-      <div class="feature"><div class="ico">↗</div><div><b>Ik wil weten wanneer</b><span>Prijs daalt, review verschijnt, firmware wijzigt of belangrijk nieuws uitkomt.</span></div></div>
-      <div class="feature"><div class="ico">≋</div><div><b>Mijn feed</b><span>Een logische startpagina die de algemene homepage aanvult, niet vervangt.</span></div></div>
-    </div>
-  </div>
-  <p class="gallery-intro">Voorbeeldthema’s voor de persoonlijke feed van Mijn ID:</p>
-  <div class="topic-gallery" aria-label="Voorbeeldthema’s voor Mijn ID">
-    <figure class="photo-panel"><img src="assets/images/iphone.avif" alt="iPhone naast een MacBook op een bureau" loading="lazy" width="1548" height="1032"><figcaption><small>Je volgt</small><strong>Apple & iPhone</strong></figcaption></figure>
-    <figure class="photo-panel"><img src="assets/images/ai.avif" alt="Laptop met een AI-toepassing in een werkruimte" loading="lazy" width="1471" height="981"><figcaption><small>Je ontdekt</small><strong>AI in de praktijk</strong></figcaption></figure>
-    <figure class="photo-panel"><img src="assets/images/thuisbatterij.avif" alt="Installatie voor zonne-energie en opslag in een woning" loading="lazy" width="774" height="516"><figcaption><small>Je overweegt</small><strong>Thuisbatterijen</strong></figcaption></figure>
-    <figure class="photo-panel"><img src="assets/images/smart-home.avif" alt="Bedieningspaneel voor een slim huis aan de muur" loading="lazy" width="1470" height="980"><figcaption><small>Je gebruikt</small><strong>Smart home</strong></figcaption></figure>
-  </div>
-  <div class="prototype-cta">
-    <div class="copy"><div class="mini-kicker">Interactieve mockup</div><h3>Hoe zou Mijn ID er in de praktijk uit kunnen zien?</h3><p>Open het losse concept om de persoonlijke startpagina, navigatie, apparaten, interesses, community en meldingen te bekijken.</p></div>
-    <a href="./mijn-id.html" target="_blank" rel="noopener">Bekijk voorbeeld ↗</a>
-  </div>
+  <div class="section-head"><div><div class="kicker">05 · Kernproduct</div><h2>Mijn ID: de persoonlijke voordeur</h2></div><p>Eén account heeft direct nut: het bundelt wat je weet, bezit, volgt, overweegt en bijdraagt.</p></div>
+  <div class="big-idea"><div class="lead"><div class="kicker" style="color:#fff">Productvisie</div><h3>‘Wat is er vandaag relevant voor mij?’</h3><p>Een overzicht van redactionele kennis, prijsbewegingen, passende deals, testkansen en gesprekken rond jouw eigen context.</p><div class="quote">Begin bij een concrete actie: bewaar dit artikel, volg dit product, voeg dit apparaat toe of stel een prijsgrens in.</div></div>
+  <div class="feature-list"><div class="feature"><div class="ico">◎</div><div><b>Ik volg</b><span>Onderwerpen, producten, dossiers en redacteuren.</span></div></div><div class="feature"><div class="ico">▣</div><div><b>Mijn apparaten</b><span>Bezit als basis voor updates, hulp en compatibiliteit.</span></div></div><div class="feature"><div class="ico">★</div><div><b>Bewaard</b><span>Artikelen, reviews en producten in één overzicht.</span></div></div><div class="feature"><div class="ico">€</div><div><b>Mijn koopmoment</b><span>Price Alerts en Smart Buyers Club met duidelijke reden.</span></div></div><div class="feature"><div class="ico">◉</div><div><b>Ik doe mee</b><span>Testpanels, reviews, vragen, polls en eigen bijdragegeschiedenis.</span></div></div></div></div>
+  <p class="gallery-intro">Voorbeeldthema’s in een persoonlijke omgeving:</p>
+  <div class="topic-gallery"><figure class="photo-panel"><img src="assets/images/iphone.avif" alt="iPhone en MacBook op een bureau" loading="lazy"><figcaption><small>Ik heb</small><strong>Apple-apparaten</strong></figcaption></figure><figure class="photo-panel"><img src="assets/images/ai.avif" alt="Laptop met AI-toepassing" loading="lazy"><figcaption><small>Ik volg</small><strong>AI in de praktijk</strong></figcaption></figure><figure class="photo-panel"><img src="assets/images/thuisbatterij.avif" alt="Energieopslag in een woning" loading="lazy"><figcaption><small>Ik overweeg</small><strong>Thuisbatterij</strong></figcaption></figure><figure class="photo-panel"><img src="assets/images/smart-home.avif" alt="Bedieningspaneel voor een slim huis" loading="lazy"><figcaption><small>Ik test</small><strong>Smart home</strong></figcaption></figure></div>
+  <div class="prototype-cta"><div class="copy"><div class="mini-kicker">Zelfstandige mockup</div><h3>Zo kan de persoonlijke voordeur eruitzien</h3><p>Bekijk hoe ID.nl, Kieskeurig.nl en Review.nl samenkomen in Mijn ID, met Atlas als herkenbare intelligentielaag.</p></div><a href="./mijn-id.html" target="_blank" rel="noopener">Bekijk Mijn ID ↗</a></div>
 </section>
 
-<section id="bouwstenen" class="pillars">
-  <div class="section-head"><div><div class="kicker">05 · Productbouwstenen</div><h2>Vijf onderdelen die elkaar versterken</h2></div><p>Geen van deze onderdelen hoeft meteen ‘af’ te zijn. Ze kunnen afzonderlijk getest worden en later samenkomen in Mijn ID.</p></div>
-  <div class="grid g3">
-    <div class="card"><div class="num">01</div><h3>Volgen</h3><p>De simpelste relatie: ‘Hier wil ik meer van.’</p><ul><li>Onderwerpen</li><li>Producten</li><li>Dossiers</li><li>Redacteuren</li><li>Meldingen en overzichten</li></ul></div>
-    <div class="card"><div class="num">02</div><h3>Mijn apparaten</h3><p>Maak bezit de basis voor terugkerende tips en updates.</p><ul><li>Firmware en updates</li><li>Tips per apparaat</li><li>Compatibiliteit</li><li>Vervangmoment</li><li>Nieuwe relevante functies</li></ul></div>
-    <div class="card"><div class="num">03</div><h3>Vraag het ID</h3><p>Een vraag-en-antwoordfunctie die kennisbank, redactie en lezers verbindt.</p><ul><li>Vraag stellen</li><li>Antwoord van ID</li><li>Antwoorden van lezers</li><li>Bestaande artikelen koppelen</li><li>Goede vragen → artikelen</li></ul></div>
-    <div class="card"><div class="num">04</div><h3>Lezer als medemaker</h3><p>Gebruik de inbreng van lezers als journalistieke grondstof.</p><ul><li>Wat moeten we testen?</li><li>Welke bug heb jij?</li><li>Welke keuze maak jij?</li><li>Ervaringsonderzoek</li><li>Resultaten uit lezersonderzoek</li></ul></div>
-    <div class="card"><div class="num">05</div><h3>Redactie als gezicht</h3><p>Een community vormt zich rond mensen, niet rond een logo.</p><ul><li>Volgbare auteurs</li><li>Expertiseprofielen</li><li>Persoonlijke keuzes</li><li>Vraag-en-antwoordsessies</li><li>Herkenbare stemmen</li></ul></div>
-    <div class="card dark-card"><div class="num">+</div><h3>Project Atlas als onderlaag</h3><p>Een gestructureerde kennisbank voor content kan later bestaande ID-kennis automatisch koppelen aan vragen, profielen, apparaten en dossiers.</p><ul class="plain-list" style="color:#b8bec8"><li>Entiteiten herkennen</li><li>Gerelateerde kennis vinden</li><li>Veelgestelde vragen ontsluiten</li><li>Persoonlijke context koppelen</li></ul></div>
-  </div>
-</section>
+<section id="diensten" class="pillars"><div class="section-head"><div><div class="kicker">06 · Diensten</div><h2>Functies die elkaar versterken</h2></div><p>Iedere bouwsteen heeft eigen waarde en levert een ander signaal voor relevante vervolgstappen.</p></div><div class="grid g3">
+  <div class="card"><div class="num">01</div><h3>Volgen & bewaren</h3><p>ID-content en producten bewaren maakt interesses expliciet en geeft een reden voor terugkeer.</p><ul><li>Onderwerpen en dossiers</li><li>Artikelen en koopgidsen</li><li>Producten en reviews</li></ul></div>
+  <div class="card"><div class="num">02</div><h3>Mijn apparaten</h3><p>Een eigen apparatenkast koppelt praktische hulp aan producten die iemand werkelijk gebruikt.</p><ul><li>Updates en handleidingen</li><li>Compatibiliteit</li><li>Passende vervanging</li></ul></div>
+  <div class="card"><div class="num">03</div><h3>Price Alerts</h3><p>Kieskeurig bewaakt een door de gebruiker gekozen prijsgrens en toont de status in Mijn ID.</p><ul><li>Gevolgde producten</li><li>Prijsgrens per item</li><li>Meldingsvoorkeuren</li></ul></div>
+  <div class="card"><div class="num">04</div><h3>Smart Buyers Club</h3><p>Deals van Kieskeurig.nl en Review.nl worden relevant door koopintentie, prijscontext en een zichtbare verklaring.</p><ul><li>Beste deals voor jou</li><li>Waarom deze tip?</li><li>Heldere commerciële herkomst</li></ul></div>
+  <div class="card"><div class="num">05</div><h3>Testen & reviews</h3><p>Review.nl biedt passende testpanels en een route van productervaring naar bruikbare review.</p><ul><li>Paneloproepen</li><li>Mijn tests en deadlines</li><li>Mijn reviews</li></ul></div>
+  <div class="card dark-card"><div class="num">06</div><h3>Community in de reis</h3><p>Vragen, polls en ervaringen verschijnen bij het onderwerp of product waar ze helpen, met de redactie als zichtbaar gezicht.</p><ul class="plain-list" style="color:#b8bec8"><li>Vraag het ID</li><li>Meedenken over tests</li><li>Ervaringen van eigenaren</li></ul></div>
+</div></section>
 
-<section>
-  <div class="section-head"><div><div class="kicker">Ecosysteem</div><h2>Van losse onderdelen naar één vliegwiel</h2></div><p>ID hoeft dit niet volledig alleen te doen. Artikelen, productinformatie, prijzen en gebruikerservaringen kunnen elkaar versterken.</p></div>
-  <div class="flywheel">
-    <h3>Het gewenste vliegwiel</h3><p>Meer gebruik levert meer context op; meer context maakt de ervaring persoonlijker; een betere ervaring verhoogt terugkeer en deelname.</p>
-    <div class="fly-row"><div class="fly-node">Content & dossiers</div><div class="fly-arrow">→</div><div class="fly-node">Voorkeuren & intentie</div><div class="fly-arrow">→</div><div class="fly-node">Persoonlijke waarde</div></div>
-    <div class="fly-row" style="margin-top:10px"><div class="fly-node">Reviews & ervaringen</div><div class="fly-arrow">←</div><div class="fly-node">Terugkeer & participatie</div><div class="fly-arrow">←</div><div class="fly-node">Alerts, prijzen & updates</div></div>
-  </div>
-</section>
+<section id="reis"><div class="section-head"><div><div class="kicker">07 · Gebruikersreis</div><h2>Van artikel tot waardevolle bijdrage</h2></div><p>Een herkenbaar scenario toont waar elke dienst iets toevoegt.</p></div><div class="journey"><div><b>1 · ID.nl</b>Een lezer ontdekt een koopgids over robotstofzuigers en bewaart twee modellen.</div><div><b>2 · Kieskeurig.nl</b>In Mijn ID stelt zij een Price Alert in en ziet later een passende Smart Buyers Club-deal.</div><div><b>3 · Review.nl</b>Na gebruik schrijft zij een review of meldt zich aan voor een relevant testpanel.</div><div><b>4 · Atlas → Mijn ID</b>De ervaring verrijkt de productkennis. Een ander krijgt een beter onderbouwde tip.</div></div><div class="metric-callout"><b>Het vliegwiel:</b> content → profielsignaal → relevante keuzehulp → aankoop → ervaring → bijdrage → betere kennis → betere personalisatie.</div></section>
 
-<section id="funnel">
-  <div class="section-head"><div><div class="kicker">06 · Communityfunnel</div><h2>Community is het eindpunt, niet het startpunt</h2></div><p>Elke stap vraagt slechts één extra vorm van betrokkenheid. Het ontwerp moet gebruikers geleidelijk laten opschuiven, zonder ze te dwingen.</p></div>
-  <div class="funnel">
-    <div class="stage"><b>1 · Bezoeker</b><span>Komt binnen via zoekmachines, sociale media, direct verkeer of verwijzingen.</span><div class="trigger">‘Dit was nuttig’</div></div>
-    <div class="stage"><b>2 · Terugkeer</b><span>Volgt een onderwerp, product of dossier.</span><div class="trigger">‘Hier wil ik meer van’</div></div>
-    <div class="stage"><b>3 · Profiel</b><span>Bewaart, volgt, vult interesses of apparaten aan.</span><div class="trigger">‘ID mag dit onthouden’</div></div>
-    <div class="stage"><b>4 · Deelnemer</b><span>Stemt, reageert, stelt een vraag of doet mee aan een test.</span><div class="trigger">‘Ik doe mee’</div></div>
-    <div class="stage"><b>5 · Communitylid</b><span>Heeft historie, expertise, herkenning en terugkerende relaties.</span><div class="trigger">‘Mensen kennen mijn bijdrage’</div></div>
-    <div class="stage"><b>6 · Ambassadeur</b><span>Helpt anderen, deelt ID, levert tips en komt uit zichzelf terug.</span><div class="trigger">‘Dit is mijn club’</div></div>
-  </div>
-</section>
+<section id="roadmap"><div class="section-head"><div><div class="kicker">08 · Roadmap</div><h2>Het ecosysteem groeit vanaf de basis mee</h2></div><p>Valideer gedrag vroeg, maar leg productidentiteit, toestemming en samenwerking tussen de merken meteen goed vast.</p></div><div class="timeline">
+  <div class="phase one"><span class="when">0–3 maanden</span><h3>Bewijs & fundament</h3><p class="goal">Toets de propositie en maak Atlas-koppelingen concreet.</p><ul><li>Gedeelde product- en onderwerpdefinities</li><li>Nulmeting van terugkeer en acties</li><li>Volgen en bewaren op ID.nl</li><li>Prijsalert- en testpanelproeven</li><li>Toestemming en datastromen ontwerpen</li></ul></div>
+  <div class="phase two"><span class="when">3–6 maanden</span><h3>Eerste Mijn ID</h3><p class="goal">Lever één werkende voordeur met directe waarde.</p><ul><li>Gedeelde login en voorkeuren</li><li>Opgeslagen content en producten</li><li>Kieskeurig Price Alerts in overzicht</li><li>Review.nl-testoproepen zichtbaar</li><li>Uitleg bij aanbevelingen</li></ul></div>
+  <div class="phase three"><span class="when">6–12 maanden</span><h3>Verdiep de reis</h3><p class="goal">Koppel bezit, koopintentie en ervaring.</p><ul><li>Mijn apparaten</li><li>Smart Buyers Club-personalisatie</li><li>Teststatus en reviews</li><li>Vragen en redactionele participatie</li><li>Atlas-relaties en datakwaliteit uitbreiden</li></ul></div>
+  <div class="phase four"><span class="when">12+ maanden</span><h3>Schaal het vliegwiel</h3><p class="goal">Optimaliseer relevantie en waarde over de hele reis.</p><ul><li>Compatibiliteitsadvies</li><li>Communityhistorie en expertise</li><li>Persoonlijke lifecycle-momenten</li><li>Meetbare bijdrage aan kennis</li><li>Doorlopend testen van vertrouwen en nut</li></ul></div>
+</div></section>
 
-<section id="roadmap">
-  <div class="section-head"><div><div class="kicker">07 · Roadmap</div><h2>Van bewijs naar platform</h2></div><p>De roadmap voorkomt dat er eerst maanden techniek wordt gebouwd zonder bewijs dat gebruikers de onderliggende gedragingen daadwerkelijk willen.</p></div>
-  <div class="timeline">
-    <div class="phase one"><span class="when">0–3 maanden</span><h3>Bewijs de behoefte</h3><p class="goal">Test of bezoekers vrijwillig willen terugkomen en participeren.</p><ul><li>‘Volg dit onderwerp’ op drie dossiers</li><li>Terugkerende ‘Vraag aan jullie’</li><li>Nieuwsbrief met lezersbijdragen</li><li>Interactiegedrag meten</li><li>Nulmeting van Returning Engaged Users</li></ul></div>
-    <div class="phase two"><span class="when">3–6 maanden</span><h3>Bouw de basis</h3><p class="goal">Maak succesvolle gedragingen blijvend en persoonlijk.</p><ul><li>Licht Mijn ID-profiel</li><li>Bewaren en volgen</li><li>Persoonlijk overzicht</li><li>Eerste productmeldingen koppelen</li><li>Auteurs en expertises volgen</li></ul></div>
-    <div class="phase three"><span class="when">6–12 maanden</span><h3>Maak deelname zichtbaar</h3><p class="goal">Verbind het lezen van artikelen aan actieve bijdragen en expertise.</p><ul><li>Vraag het ID</li><li>Antwoorden van lezers</li><li>Mijn apparaten</li><li>Testpanel integreren</li><li>Profielen en bijdragegeschiedenis</li></ul></div>
-    <div class="phase four"><span class="when">12+ maanden</span><h3>Laat het ecosysteem werken</h3><p class="goal">Bouw een moeilijk kopieerbare persoonlijke combinatie van content, producten en community.</p><ul><li>Reputatie / expertise</li><li>Slimme Atlas-koppelingen</li><li>Prijs + content + bezit</li><li>Persoonlijke homepage</li><li>Ambassadeursprogramma</li></ul></div>
-  </div>
-</section>
+<section id="kpis"><div class="section-head"><div><div class="kicker">09 · Meetmodel</div><h2>North Star: betrokken terugkeerders</h2></div><p>Meet de gezamenlijke relatie over de drie merken. Definities en doelen worden na de nulmeting vastgelegd.</p></div><div class="northstar"><div><div class="kicker">North Star Metric</div><div class="metric">REU</div><p><b>Returning Engaged Users:</b> unieke ingelogde gebruikers die in een kalendermaand op minimaal drie verschillende dagen een ecosysteemdienst bezoeken en ten minste één bewuste waardeactie doen.</p></div><div class="formula"><b>Voorstel definitie</b><br><br>Gedeeld account<br>+ bezoek op ≥ 3 dagen / maand<br>+ ≥ 1 bewuste actie op ID.nl, Kieskeurig.nl of Review.nl<div class="chips"><span class="chip">volgen</span><span class="chip">bewaren</span><span class="chip">Price Alert</span><span class="chip">deal openen</span><span class="chip">testaanmelding</span><span class="chip">review</span><span class="chip">vraag of stem</span></div></div></div>
+<div class="tablewrap" style="margin-top:18px"><table><thead><tr><th>Stap</th><th>KPI</th><th>Wat dit laat zien</th><th>Fase</th></tr></thead><tbody>
+<tr><td>Activering</td><td>% nieuwe accounts met eerste waardeactie binnen 7 dagen</td><td>Of Mijn ID direct nut heeft.</td><td><span class="status now">Basis</span></td></tr>
+<tr><td>Terugkeer</td><td>REU en 30-dagenretentie per herkomstmerk</td><td>Of de relatie sterker wordt, ook buiten het instapmerk.</td><td><span class="status now">Basis</span></td></tr>
+<tr><td>Crossbrand</td><td>% actieve gebruikers met betekenisvolle actie op ≥ 2 merken</td><td>Of de ecosysteempropositie echt werkt.</td><td><span class="status next">Eerste Mijn ID</span></td></tr>
+<tr><td>Koopwaarde</td><td>Price Alert-activering, alertretentie en relevante dealinteractie</td><td>Of koopdiensten herhaald nut leveren.</td><td><span class="status next">Eerste Mijn ID</span></td></tr>
+<tr><td>Participatie</td><td>Testaanmeldingen, afgeronde reviews en terugkeer van bijdragers</td><td>Of ervaring kennis voor anderen oplevert.</td><td><span class="status later">Verdieping</span></td></tr>
+<tr><td>Vertrouwen</td><td>Afmeldingen, verborgen tips en feedback op relevantie</td><td>Of personalisatie welkom en begrijpelijk blijft.</td><td><span class="status now">Doorlopend</span></td></tr>
+</tbody></table></div></section>
 
-<section id="kpis">
-  <div class="section-head"><div><div class="kicker">08 · Meetmodel</div><h2>North Star: Returning Engaged Users</h2></div><p>Accounts en reacties zijn middelen, geen einddoel. De kernvraag is hoeveel mensen ID vrijwillig opnieuw bezoeken én bewust iets doen.</p></div>
-  <div class="northstar">
-    <div><div class="kicker">North Star Metric</div><div class="metric">REU</div><p><b>Returning Engaged Users</b>: gebruikers die ID op meerdere dagen binnen een maand bezoeken én minimaal één betekenisvolle interactie uitvoeren.</p></div>
-    <div class="formula"><b>Voorstel definitie</b><br><br>Unieke gebruiker<br>+ bezoek op ≥ 3 verschillende dagen / maand<br>+ ≥ 1 bewuste interactie<div class="chips"><span class="chip">volgen</span><span class="chip">bewaren</span><span class="chip">alert</span><span class="chip">stemmen</span><span class="chip">vragen</span><span class="chip">reageren</span><span class="chip">testdeelname</span></div></div>
-  </div>
-  <div class="tablewrap" style="margin-top:18px"><table><thead><tr><th>Doel</th><th>KPI</th><th>Waarom</th><th>Fase</th></tr></thead><tbody>
-    <tr><td>Terugkeer</td><td>Terugkeerpercentage na 7 en 30 dagen</td><td>Meet of ID een gewoonte begint te worden.</td><td><span class="status now">Nu</span></td></tr>
-    <tr><td>Voorkeur</td><td>Volg- en bewaarpercentage</td><td>Bewijst bereidheid om een toekomstige relatie aan te gaan.</td><td><span class="status now">Nu</span></td></tr>
-    <tr><td>Participatie</td><td>Acties per 1.000 bezoekers</td><td>Maakt engagement vergelijkbaar tussen formats en dossiers.</td><td><span class="status now">Nu</span></td></tr>
-    <tr><td>Profielwaarde</td><td>% profielen met ≥ 3 signalen</td><td>Laat zien of personalisatie genoeg context kan verzamelen.</td><td><span class="status next">Volgende fase</span></td></tr>
-    <tr><td>Communitygezondheid</td><td>% actieve bijdragers dat terugkeert</td><td>Voorkomt focus op eenmalige reacties of lege accounts.</td><td><span class="status next">Volgende fase</span></td></tr>
-    <tr><td>Ambassadeurs</td><td>Nuttige bijdragen en gedeelde artikelen</td><td>Meet of leden daadwerkelijk waarde voor anderen toevoegen.</td><td><span class="status later">Later</span></td></tr>
-  </tbody></table></div>
-</section>
+<section id="experimenten" class="experiments"><div class="section-head"><div><div class="kicker">10 · Eerste experimenten</div><h2>Drie proeven voor de eerste 90 dagen</h2></div><p>Iedere proef toetst een verbinding tussen diensten en levert een besluit op voor de volgende bouwfase.</p></div><div class="grid g3">
+<div class="card"><div class="exp-no">01</div><h3>Content → Price Alert</h3><p>Laat lezers bij een ID-koopgids een product bewaren en op Kieskeurig een prijsgrens instellen, zichtbaar in een licht Mijn ID-overzicht.</p><div class="testline"><b>Bewijs:</b> bewaar- en alertpercentage, terugkeer na melding, afmeldingen.</div></div>
+<div class="card"><div class="exp-no">02</div><h3>Interesse → testpanel</h3><p>Toon een passende Review.nl-oproep bij een ID-dossier en volg de route tot aanmelding, test en review.</p><div class="testline"><b>Bewijs:</b> relevante aanmeldingen, afronding, kwaliteit van reviews.</div></div>
+<div class="card"><div class="exp-no">03</div><h3>Apparaat → persoonlijk nut</h3><p>Test een kleine apparatenlijst met een Atlas-koppeling naar een praktische ID-tip, passend product en bruikbare ervaring.</p><div class="testline"><b>Bewijs:</b> toevoegpercentage, klik op uitleg, waardering van relevantie.</div></div>
+</div></section>
 
-<section id="experimenten" class="experiments">
-  <div class="section-head"><div><div class="kicker">09 · Eerste experimenten</div><h2>Drie tests vóór grote ontwikkeling</h2></div><p>Doel van de eerste 90 dagen: aantonen dat de gewenste gedragingen bestaan en leren welke propositie mensen voldoende waardevol vinden.</p></div>
-  <div class="grid g3">
-    <div class="card"><div class="exp-no">01</div><h3>Volg dit onderwerp</h3><p>Test op drie sterke dossiers, bijvoorbeeld een merk- of productdossier, een gamingdossier en een dossier over slim wonen. Laat volgen direct iets opleveren: een e-mailoverzicht of melding.</p><div class="testline"><b>Bewijs:</b> volgpercentage, terugkeerpercentage van volgers tegenover niet-volgers en uitschrijvingen.</div></div>
-    <div class="card"><div class="exp-no">02</div><h3>Vraag aan jullie</h3><p>Plaats structureel één relevante vraag in artikelen en op de homepage. Verwerk de beste antwoorden aantoonbaar in vervolgverhalen en verwijs terug naar de deelnemers.</p><div class="testline"><b>Bewijs:</b> responspercentage, kwaliteit van de antwoorden en aandeel terugkerende deelnemers.</div></div>
-    <div class="card"><div class="exp-no">03</div><h3>De ID-clubbrief</h3><p>Maak van de nieuwsbrief geen verzameling links, maar een terugkerend redactioneel ritueel met vragen, keuzes, lezerstips, testoproepen, vooruitblik en persoonlijke stemmen.</p><div class="testline"><b>Bewijs:</b> open- en klikgedrag, directe terugkeer en deelname vanuit de nieuwsbrief.</div></div>
-  </div>
-</section>
+<section id="business"><div class="section-head"><div><div class="kicker">11 · Businesswaarde</div><h2>Waarde voor gebruiker én merken</h2></div><p>De businesscase groeit uit herhaald nut en vertrouwen. Financiële doelen vragen een baseline en experimentresultaten.</p></div><div class="value-grid"><div class="valuebox"><h3>Gebruikerswaarde</h3><div class="value-row"><div class="mark">✓</div><div><b>Minder zoekwerk</b><p>Artikelen, producten, prijzen en ervaringen komen samen rond de eigen vraag.</p></div></div><div class="value-row"><div class="mark">€</div><div><b>Betere koopmomenten</b><p>Price Alerts en Smart Buyers Club helpen op een zelfgekozen moment en prijsniveau.</p></div></div><div class="value-row"><div class="mark">◉</div><div><b>Meer invloed</b><p>Testen, reviewen en vragen stellen leveren zichtbare waarde voor anderen.</p></div></div></div><div class="valuebox ecosystem"><h3>Ecosysteemwaarde</h3><p>Een gedeelde relatie kan direct verkeer, profielkwaliteit, koopintentie en participatie versterken. Atlas maakt dezelfde kennis over de merken heen herbruikbaar.</p><div class="eco"><div><b>ID.nl</b>relevante content & terugkeer</div><div><b>Kieskeurig.nl</b>gekwalificeerde koopintentie</div><div><b>Review.nl</b>testdeelname & reviews</div></div><p style="margin-top:18px"><b style="color:#fff">Commercieel principe:</b> meet incrementele waarde per stap; toon bij deals de herkomst en houd redactionele keuzes onafhankelijk.</p></div></div></section>
 
-<section id="business">
-  <div class="section-head"><div><div class="kicker">10 · Businesswaarde</div><h2>Waarom dit meer is dan engagement</h2></div><p>Een vaste gebruikersbasis heeft redactionele én commerciële waarde, zolang het productvoordeel voor de gebruiker leidend blijft.</p></div>
-  <div class="value-grid">
-    <div class="valuebox">
-      <h3>Waarde voor ID.nl</h3>
-      <div class="value-row"><div class="mark">↻</div><div><b>Meer direct en terugkerend verkeer</b><p>Minder afhankelijkheid van één acquisitiekanaal en meer bereik dat ID zelf kan activeren.</p></div></div>
-      <div class="value-row"><div class="mark">◎</div><div><b>Betere eigen gebruikerssignalen</b><p>Niet alleen wat iemand leest, maar ook wat iemand volgt, bezit, overweegt en belangrijk vindt.</p></div></div>
-      <div class="value-row"><div class="mark">✦</div><div><b>Sterkere contentfeedback</b><p>Vragen, polls en gebruikssignalen maken duidelijk welke problemen en onderwerpen werkelijk leven.</p></div></div>
-      <div class="value-row"><div class="mark">€</div><div><b>Meer relevante commerciële momenten</b><p>Prijsdalingsmeldingen, koopintentie en productcontext maken commerciële proposities specifieker — zonder de redactionele relatie te ondermijnen.</p></div></div>
-    </div>
-    <div class="valuebox ecosystem">
-      <h3>Potentiële ecosysteempositie</h3><p>Op langere termijn kan Mijn ID de natuurlijke persoonlijke laag worden tussen content, productkeuze en gebruikerservaring.</p>
-      <div class="eco"><div><b>ID.nl</b>begrijpen & gebruiken</div><div><b>Kieskeurig</b>vergelijken & prijzen</div><div><b>Review.nl</b>testen & ervaren</div></div>
-      <p style="margin-top:18px"><b style="color:#fff">Strategische belofte:</b><br>één gebruiker, één context, meerdere nuttige momenten.</p>
-    </div>
-  </div>
-</section>
+<section id="risicos"><div class="section-head"><div><div class="kicker">12 · Waarborgen</div><h2>Wat vertrouwen en uitvoering vraagt</h2></div><p>De grootste risico's zitten in datakwaliteit, toestemming, merkovergangen en dagelijkse operatie.</p></div><div class="card">
+<div class="risk"><div><span class="tag">Risico</span><br><b>Onjuiste koppelingen</b></div><p>Verkeerde product- of apparaatherkenning maakt tips onbruikbaar.</p><p class="guard"><b>Waarborg:</b> gedeelde identifiers, bronvermelding, kwaliteitscontrole en correctiemogelijkheid.</p></div>
+<div class="risk"><div><span class="tag">Risico</span><br><b>Onduidelijke toestemming</b></div><p>Signalen tussen merken combineren kan als onverwacht voelen.</p><p class="guard"><b>Waarborg:</b> voorkeuren per signaal en kanaal, heldere uitleg en eenvoudig verwijderen.</p></div>
+<div class="risk"><div><span class="tag">Risico</span><br><b>Commerciële druk</b></div><p>Deals kunnen redactioneel advies verdringen.</p><p class="guard"><b>Waarborg:</b> herkenbare herkomst, expliciete scheiding van redactie en commercie, relevantiefeedback.</p></div>
+<div class="risk"><div><span class="tag">Risico</span><br><b>Te brede lancering</b></div><p>Een compleet dashboard zonder werkende diensten levert weinig reden om terug te komen.</p><p class="guard"><b>Waarborg:</b> begin met concrete waardeacties en schaal op basis van gebruik en retentie.</p></div>
+<div class="risk"><div><span class="tag">Risico</span><br><b>Beheer & moderatie</b></div><p>Tests, reviews en vragen vragen eigenaarschap.</p><p class="guard"><b>Waarborg:</b> vaste producteigenaren per dienst, moderatieregels en duidelijke opvolging.</p></div>
+</div></section>
 
-<section id="risicos">
-  <div class="section-head"><div><div class="kicker">11 · Risico's & waarborgen</div><h2>Wat we bewust níét moeten doen</h2></div><p>Communityproducten mislukken vaak niet door gebrek aan functies, maar doordat ze te groot starten, te weinig directe waarde bieden of intern geen eigenaarschap hebben.</p></div>
-  <div class="card">
-    <div class="risk"><div><span class="tag">Risico</span><br><b>Een leeg forum</b></div><p>Een aparte communityruimte zonder bestaande gedragsstroom voelt snel verlaten.</p><p class="guard"><b>Waarborg:</b> interactie eerst ín bestaande artikelen, dossiers, reviews en nieuwsbrieven.</p></div>
-    <div class="risk"><div><span class="tag">Risico</span><br><b>Registratiefrictie</b></div><p>Te vroeg om een account vragen verlaagt conversie en maakt waarde abstract.</p><p class="guard"><b>Waarborg:</b> elke registratievraag koppelen aan direct zichtbaar voordeel.</p></div>
-    <div class="risk"><div><span class="tag">Risico</span><br><b>Moderatiekosten</b></div><p>Open reacties kunnen snel operationele en reputatierisico's creëren.</p><p class="guard"><b>Waarborg:</b> begin met afgebakende vraag-en-antwoordrubrieken en peilingen; schaal open discussies pas op als er voldoende moderatiecapaciteit is.</p></div>
-    <div class="risk"><div><span class="tag">Risico</span><br><b>Te veel functies</b></div><p>Te veel functies tegelijk maakt zowel ontwikkeling als boodschap onduidelijk.</p><p class="guard"><b>Waarborg:</b> één gedragsvraag per fase en alleen opschalen bij aantoonbaar gebruik.</p></div>
-    <div class="risk"><div><span class="tag">Risico</span><br><b>Commercie te vroeg</b></div><p>Als personalisatie vooral als advertentie-instrument voelt, daalt vertrouwen.</p><p class="guard"><b>Waarborg:</b> persoonlijk nut en redactionele relevantie eerst; inkomsten volgen uit bewezen waarde.</p></div>
-  </div>
-</section>
+<section id="besluit"><div class="decision"><div class="kicker" style="color:#fff">13 · Besluit voor nu</div><h2>Start één gezamenlijke productreis.</h2><p>Kies een eerste use case waarin ID-content, een Kieskeurig Price Alert en een Review.nl-vervolgstap zichtbaar verbonden zijn. Bouw tegelijk de minimale Atlas-definities, accountafspraken en meetbasis. Beslis na 90 dagen welke waardeactie voldoende bewijs heeft voor de eerste Mijn ID-release.</p><div class="decision-grid"><div class="decision-card"><small>Stap 1</small><b>Maak eigenaarschap expliciet</b><span>Product, redactie, data en de drie merken besluiten samen over de eerste reis.</span></div><div class="decision-card"><small>Stap 2</small><b>Test de drie verbindingen</b><span>Content naar alert, interesse naar test en apparaat naar persoonlijk nut.</span></div><div class="decision-card"><small>Stap 3</small><b>Beslis op bewijs</b><span>Gebruik, terugkeer, relevantie en vertrouwen bepalen de volgende release.</span></div></div></div></section>
 
-<section id="besluit">
-  <div class="decision">
-    <div class="kicker" style="color:#fff">12 · Besluit voor nu</div><h2>Nog geen communityplatform bouwen.</h2>
-    <p>Start met drie gedragsproeven die aantonen of bezoekers een relatie met ID willen: volgen, meedoen en terugkeren. Gebruik de uitkomst om Mijn ID daarna gericht — en veel minder risicovol — op te bouwen.</p>
-    <div class="decision-grid"><div class="decision-card"><small>Stap 1</small><b>Doe een nulmeting</b><span>Definieer REU en meet het bestaande terugkeerpercentage.</span></div><div class="decision-card"><small>Stap 2</small><b>Start drie experimenten</b><span>Volgen, ‘Vraag aan jullie’ en de clubbrief.</span></div><div class="decision-card"><small>Stap 3</small><b>Beslis na 90 dagen</b><span>Welke gedraging verdient productontwikkeling?</span></div></div>
-  </div>
-</section>
-
-<footer><span>ID.nl · Businessplan Community & Loyaliteit · concept</span><span>Strategische kern: nut → participatie → identiteit</span><span>Sfeerbeelden: <a href="https://github.com/ee1koo/id2027/blob/main/assets/BEELDBRONNEN.md">Unsplash-bronnen</a></span></footer>
+<footer><span>Mijn ID · strategie voor het consumentenecosysteem · concept v2.0</span><span>Atlas → relevantie → gebruik → bijdrage</span><span>Sfeerbeelden: <a href="assets/BEELDBRONNEN.md">Unsplash-bronnen</a></span></footer>
 </div></main></div>
-<script>
-const bar=document.getElementById('progress');
-addEventListener('scroll',()=>{const d=document.documentElement;const p=d.scrollTop/(d.scrollHeight-d.clientHeight)*100;bar.style.width=p+'%'});
-</script>
-</body>
-</html>
-
+<script>const bar=document.getElementById('progress');addEventListener('scroll',()=>{const d=document.documentElement;const p=d.scrollTop/(d.scrollHeight-d.clientHeight)*100;bar.style.width=p+'%'});</script>
+</body></html>

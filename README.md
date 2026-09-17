@@ -1,13 +1,12 @@
-# ID.nl communityconcept
+# Mijn ID · van bereik naar relatie
 
-Open `index.html` in een browser om het businessplan te bekijken. In het hoofdstuk **Mijn ID** opent **Bekijk voorbeeld** de zelfstandige mockup `mijn-id.html` in een nieuw tabblad. Beide pagina's werken zonder webserver of internetverbinding; de foto's staan lokaal in `assets/images/`.
+Open `index.html` voor het businessplan. De knop **Bekijk Mijn ID** opent de zelfstandige mockup `mijn-id.html` in een nieuw tabblad. Beide pagina's werken lokaal; de bestaande sfeerbeelden staan in `assets/images/`.
 
-## Mapstructuur
+## Bestanden
 
-- `index.html` — businessplan
-- `mijn-id.html` — interactieve conceptpagina
+- `index.html` — strategie, architectuur, waardepropositie, roadmap en KPI's
+- `mijn-id.html` — conceptmockup met navigatie naar apparaten, bewaard, deals, prijsalerts, testen en reviews
 - `assets/images/` — lokale Unsplash-sfeerbeelden (AVIF)
 - `assets/BEELDBRONNEN.md` — makers en fotolinks
 
-De teksten, persoonsgegevens, meldingen en productnamen in de mockup zijn illustratieve voorbeelddata. De foto's tonen geen medewerkers of locaties van ID.nl. AVIF wordt ondersteund door actuele versies van Chrome, Edge, Firefox en Safari.
-
+De personen, producten, prijzen, meldingen en resultaten in de mockup zijn illustratieve voorbeeldgegevens. De foto's tonen geen medewerkers of locaties van ID.nl.

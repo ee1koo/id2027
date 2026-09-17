@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mijn ID — concept</title>
+<style>
+:root{
+  --bg:#f5f6f4; --surface:#ffffff; --surface-2:#eef2ef; --ink:#202641; --muted:#6b7180;
+  --line:#e1e5e2; --brand:#55d78a; --brand-2:#31bd76; --brand-dark:#19754b; --navy:#252d50; --navy-2:#30395f; --accent:#55d78a; --good:#168553;
+  --shadow:0 18px 50px rgba(37,45,80,.08); --r:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#fff 0,#f5f6f4 180px);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink)}
+button,input{font:inherit}
+a{color:inherit;text-decoration:none}
+.shell{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}
+.sidebar{position:sticky;top:0;height:100vh;padding:26px 20px 24px;background:var(--navy);color:#fff;display:flex;flex-direction:column;z-index:3}
+.logo{display:flex;align-items:center;gap:11px;font-weight:900;font-size:25px;letter-spacing:-.04em;margin:2px 6px 30px}
+.logo-mark{width:48px;height:34px;display:flex;align-items:center;justify-content:center;gap:1px;font-size:22px;font-weight:950;letter-spacing:-.08em}.logo-i{color:var(--brand)}.logo-d{color:#fff}
+.logo small{font-size:12px;color:#9da6ae;font-weight:700;letter-spacing:.02em;margin-left:3px}
+.nav{display:grid;gap:7px}
+.nav button{border:0;background:transparent;color:#aeb7bf;padding:12px 13px;border-radius:13px;text-align:left;display:flex;gap:11px;align-items:center;cursor:pointer;font-weight:700}
+.nav button:hover,.nav button.active{background:#343d64;color:#fff}.nav button.active .icon{color:var(--brand)}
+.nav .icon{width:22px;text-align:center}
+.sidebar-note{margin-top:auto;background:linear-gradient(145deg,#313a60,#202746);border:1px solid #414a70;border-radius:18px;padding:16px}
+.sidebar-note b{display:block;font-size:14px;margin-bottom:6px}.sidebar-note p{color:#aeb7bf;font-size:12px;line-height:1.45;margin:0 0 13px}
+.sidebar-note button{border:0;border-radius:11px;background:var(--brand);color:var(--navy);padding:9px 11px;font-weight:800;cursor:pointer;width:100%}
+.main{min-width:0;padding:22px 34px 60px}
+.topbar{max-width:1280px;margin:auto;display:flex;gap:16px;align-items:center;justify-content:space-between;padding:4px 0 24px}
+.search{flex:1;max-width:560px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;gap:10px;box-shadow:0 7px 24px rgba(17,22,27,.04)}
+.search input{border:0;outline:0;width:100%;background:transparent}
+.user{display:flex;align-items:center;gap:10px;font-weight:800}.avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#dff8e8,#bcebd0);color:var(--navy);display:grid;place-items:center;border:2px solid #fff;box-shadow:0 5px 18px rgba(0,0,0,.08)}
+.content{max-width:1280px;margin:auto}.eyebrow{font-size:13px;color:var(--brand-dark);font-weight:900;text-transform:uppercase;letter-spacing:.09em}
+h1{font-size:clamp(36px,4.8vw,68px);line-height:.96;letter-spacing:-.055em;margin:8px 0 14px;max-width:900px}.lead{font-size:18px;line-height:1.55;color:#4f5964;max-width:850px;margin:0}
+.hero{padding:32px 0 28px;display:grid;grid-template-columns:1.45fr .75fr;gap:24px;align-items:stretch}
+.hero-copy{padding:18px 0}.hero-card{border-radius:28px;padding:26px;color:#fff;background:radial-gradient(circle at 85% 10%,rgba(85,215,138,.32),transparent 34%),linear-gradient(135deg,#252d50,#30395f 58%,#22375a);box-shadow:0 24px 55px rgba(37,45,80,.20);display:flex;flex-direction:column;justify-content:space-between;min-height:235px}
+.hero-card .big{font-size:48px;font-weight:950;letter-spacing:-.06em;color:var(--brand)}.hero-card p{margin:8px 0 0;opacity:.9;line-height:1.45}.hero-card .mini{display:flex;justify-content:space-between;gap:10px;align-items:end}.hero-card .chip{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.22);padding:8px 10px;border-radius:999px;font-size:12px;font-weight:800}
+.section{margin-top:22px}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:13px}.section-head h2{font-size:25px;letter-spacing:-.035em;margin:0}.section-head p{margin:5px 0 0;color:var(--muted);font-size:14px}.link{font-size:13px;font-weight:900;color:var(--brand-dark);cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 9px 34px rgba(17,22,27,.045);overflow:hidden}.pad{padding:20px}
+.news-main{grid-column:span 7}.news-side{grid-column:span 5}.topics{grid-column:span 4}.devices{grid-column:span 8}.community{grid-column:span 7}.saved{grid-column:span 5}
+.article{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:16px;border-bottom:1px solid #edf0f2}.article:last-child{border-bottom:0}.thumb{min-height:105px;border-radius:15px;background:linear-gradient(135deg,#252d50,#66708e);position:relative;overflow:hidden}.thumb.orange{background:linear-gradient(135deg,#2fbf76,#8ae1ad)}.thumb.purple{background:linear-gradient(135deg,#252d50,#4d5a86)}.thumb.blue{background:linear-gradient(135deg,#2f5966,#6fbba7)}.thumb:after{content:"";position:absolute;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.15);right:-15px;top:-15px}.meta{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:var(--brand-dark)}.article h3{font-size:17px;line-height:1.2;letter-spacing:-.02em;margin:6px 0 7px}.article p{font-size:13px;line-height:1.45;color:var(--muted);margin:0}.reason{margin-top:9px;font-size:11px;color:#7c8791}.reason b{color:var(--ink)}
+.alert{padding:18px;border-bottom:1px solid #edf0f2;display:flex;gap:13px}.alert:last-child{border-bottom:0}.alert-icon{width:42px;height:42px;flex:none;border-radius:13px;background:#e7f8ed;color:var(--brand-dark);display:grid;place-items:center}.alert h4{margin:0 0 4px;font-size:14px}.alert p{margin:0;color:var(--muted);font-size:12px;line-height:1.4}.tag{display:inline-flex;padding:7px 9px;border-radius:999px;background:#f1f4f6;font-size:12px;font-weight:800;margin:4px 5px 4px 0}.tag.on{background:#e7f8ed;color:#176f48;border:1px solid #beeccc}
+.device-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.device{border:1px solid var(--line);border-radius:17px;padding:15px;background:linear-gradient(180deg,#fff,#fafbfc)}.device-ico{height:80px;border-radius:14px;background:linear-gradient(145deg,#eef2f5,#dce3e8);display:grid;place-items:center;font-size:34px;margin-bottom:11px}.device small{color:var(--muted);display:block;margin-top:4px}.device .status{margin-top:10px;font-size:11px;font-weight:900;color:var(--good)}
+.poll{background:var(--navy);color:#fff;border-radius:18px;padding:18px;margin:0 0 14px}.poll .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#76e4a5;font-weight:900}.poll h3{margin:7px 0 14px;font-size:21px;line-height:1.18;letter-spacing:-.03em}.option{background:#30395f;border:1px solid #444e78;border-radius:12px;padding:10px 12px;margin-top:8px;display:flex;justify-content:space-between;font-size:13px}.people{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:12px}.face{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#dff8e8,#cdd5ed);margin-left:-10px;border:2px solid #fff}.face:first-child{margin-left:0}
+.saved-item{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid #edf0f2}.saved-item:last-child{border-bottom:0}.saved-icon{width:46px;height:46px;border-radius:13px;background:#f1f4f6;display:grid;place-items:center}.saved-item h4{margin:0 0 5px;font-size:14px}.saved-item p{font-size:11px;color:var(--muted);margin:0}.progress{height:8px;background:#edf0f2;border-radius:999px;overflow:hidden;margin-top:10px}.progress span{display:block;height:100%;width:72%;background:linear-gradient(90deg,var(--brand),var(--brand-2));border-radius:inherit}
+.bottomnav{display:none}.demo-bar{margin-top:24px;padding:15px 18px;border:1px dashed #cfd6dc;border-radius:15px;color:#68737d;font-size:12px;background:rgba(255,255,255,.55)}
+.view{display:none}.view.active{display:block}.placeholder{padding:70px 20px;text-align:center}.placeholder .giant{font-size:64px}.placeholder h2{font-size:30px;letter-spacing:-.04em;margin:14px 0 8px}.placeholder p{max-width:650px;margin:auto;color:var(--muted);line-height:1.55}
+@media(max-width:1000px){.shell{grid-template-columns:82px 1fr}.sidebar{padding:20px 13px}.logo span,.logo small,.nav button span:not(.icon),.sidebar-note{display:none}.logo{justify-content:center;margin-bottom:26px}.nav button{justify-content:center}.main{padding:18px 22px 80px}.hero{grid-template-columns:1fr}.news-main,.news-side,.topics,.devices,.community,.saved{grid-column:span 12}.device-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.shell{display:block}.sidebar{display:none}.main{padding:15px 14px 92px}.topbar{padding-bottom:12px}.search{display:none}.hero{padding-top:16px}.hero-card{min-height:190px}.grid{gap:12px}.article{grid-template-columns:100px 1fr}.article p{display:none}.device-grid{grid-template-columns:1fr 1fr}.bottomnav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:10px;right:10px;bottom:10px;z-index:20;background:rgba(37,45,80,.96);backdrop-filter:blur(15px);padding:8px;border-radius:18px;box-shadow:0 15px 45px rgba(0,0,0,.25)}.bottomnav button{border:0;background:transparent;color:#9ca7b0;padding:8px 2px;font-size:10px;font-weight:800}.bottomnav button.active{color:#fff}.bottomnav .bi{display:block;font-size:18px;margin-bottom:3px}}
+
+/* Fotografie vult de bestaande beeldvakken zonder de ID-kleuren of kaartopbouw te veranderen. */
+.thumb img,.interest-image img{display:block;width:100%;height:100%;object-fit:cover}
+.thumb:after{display:none}
+.thumb img{position:absolute;inset:0}
+.interest-card{grid-column:span 4}
+.interest-image{height:150px;overflow:hidden;background:#e9efed}
+.interest-card .interest-copy{padding:16px 18px 19px}
+.interest-card h3{font-size:17px;line-height:1.23;letter-spacing:-.025em;margin:7px 0 6px}
+.interest-card p{font-size:12px;line-height:1.5;color:var(--muted);margin:0}
+@media(max-width:1000px){.interest-card{grid-column:span 4}}
+@media(max-width:700px){.interest-card{grid-column:span 12}.interest-image{height:175px}}
+
+/* Zachte verheffing voor kaarten en bediening zonder de bestaande opmaak te verschuiven. */
+@media(hover:hover) and (pointer:fine){
+  .card,.hero-card,.device,.search,.sidebar-note,.poll{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+  .card:hover,.hero-card:hover,.device:hover,.search:hover,.sidebar-note:hover,.poll:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(25,37,66,.14);border-color:#cbe7d5}
+  .hero-card:hover{box-shadow:0 28px 56px rgba(37,45,80,.26)}
+  .article,.alert,.saved-item,.option,.nav button,.sidebar-note button,.bottomnav button{transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+  .article:hover,.alert:hover,.saved-item:hover{background:#f4faf6;box-shadow:inset 3px 0 var(--brand)}
+  .option:hover{transform:translateY(-2px);background:#394670;box-shadow:0 8px 18px rgba(0,0,0,.16)}
+  .nav button:hover,.sidebar-note button:hover,.bottomnav button:hover{transform:translateY(-2px);box-shadow:0 9px 20px rgba(0,0,0,.14)}
+}
+.search:focus-within{border-color:var(--brand-2);box-shadow:0 0 0 4px rgba(85,215,138,.16),0 12px 28px rgba(25,37,66,.1)}
+.nav button:focus-visible,.sidebar-note button:focus-visible,.bottomnav button:focus-visible,.link:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.hero-card,.device,.search,.sidebar-note,.poll,.article,.alert,.saved-item,.option,.nav button,.sidebar-note button,.bottomnav button{transition:none!important;transform:none!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="logo"><div class="logo-mark" aria-label="ID.nl"><span class="logo-i">I</span><span class="logo-d">D</span></div><span>ID.nl <small>Mijn ID</small></span></div>
+    <nav class="nav" id="nav">
+      <button class="active" data-view="home"><span class="icon">⌂</span><span>Voor jou</span></button>
+      <button data-view="follow"><span class="icon">◎</span><span>Volgend</span></button>
+      <button data-view="devices"><span class="icon">▣</span><span>Mijn apparaten</span></button>
+      <button data-view="saved"><span class="icon">★</span><span>Bewaard</span></button>
+      <button data-view="community"><span class="icon">◉</span><span>Community</span></button>
+      <button data-view="alerts"><span class="icon">♢</span><span>Meldingen</span></button>
+    </nav>
+    <div class="sidebar-note">
+      <b>Maak Mijn ID slimmer</b>
+      <p>Voeg interesses en apparaten toe. Dan wordt je feed relevanter en kunnen we alleen melden wat voor jou telt.</p>
+      <button onclick="showView('devices')">Profiel aanvullen</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="search">⌕ <input placeholder="Zoek in ID, je apparaten en dossiers"></div>
+      <div class="user"><div class="avatar">E</div><span>Eelko</span></div>
+    </div>
+
+    <div class="content">
+      <section class="view active" id="view-home">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow">Jouw persoonlijke ID</div>
+            <h1>Goedemorgen Eelko.<br>Dit is relevant voor jou.</h1>
+            <p class="lead">Geen algemene homepage, maar een rustige mix van nieuws, updates, prijsbewegingen en vragen rond de onderwerpen en apparaten die jij volgt.</p>
+          </div>
+          <div class="hero-card">
+            <div><div class="big">6</div><p>nieuwe dingen sinds je laatste bezoek</p></div>
+            <div class="mini"><span class="chip">2 productupdates</span><span class="chip">1 prijsdaling</span></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-head"><div><h2>Voor jou geselecteerd</h2><p>Op basis van wat je volgt, bewaart en gebruikt.</p></div><div class="link">Feed aanpassen →</div></div>
+          <div class="grid">
+            <div class="card news-main">
+              <div class="article"><div class="thumb"><img src="assets/images/iphone.avif" alt="iPhone naast een MacBook op een bureau" width="1548" height="1032"></div><div><div class="meta">Apple · nieuw</div><h3>Deze functies van iOS 27 zijn vooral interessant als je meerdere Apple-apparaten gebruikt</h3><p>De update verandert een paar dagelijkse handelingen die op papier klein lijken, maar in de praktijk veel schelen.</p><div class="reason"><b>Waarom jij dit ziet:</b> je volgt Apple</div></div></div>
+              <div class="article"><div class="thumb"><img src="assets/images/ai.avif" alt="Laptop met een AI-toepassing in een werkruimte" width="1471" height="981"></div><div><div class="meta">AI · uitleg</div><h3>Lokale AI wordt ineens een stuk praktischer op gewone laptops</h3><p>Nieuwe compacte modellen hebben minder geheugen nodig en draaien verrassend vlot.</p><div class="reason"><b>Waarom jij dit ziet:</b> je volgt AI</div></div></div>
+              <div class="article"><div class="thumb"><img src="assets/images/thuisbatterij.avif" alt="Thuisinstallatie voor zonne-energie en energieopslag" width="774" height="516"></div><div><div class="meta">Smart Living · dossier</div><h3>Thuisbatterij kopen? Dit zijn de vijf vragen die je eerst moet beantwoorden</h3><p>Een korte beslisroute voordat je naar merken en capaciteit kijkt.</p><div class="reason"><b>Waarom jij dit ziet:</b> je volgt Thuisbatterij</div></div></div>
+            </div>
+            <div class="card news-side">
+              <div class="pad"><div class="eyebrow">Relevant nu</div><h2 style="margin:6px 0 8px;font-size:23px">Updates rond jouw interesses</h2><p style="color:var(--muted);font-size:13px;line-height:1.5;margin:0">Korte signalen waarvoor je niet eerst een artikel hoeft te zoeken.</p></div>
+              <div class="alert"><div class="alert-icon">↘</div><div><h4>Prijs gedaald</h4><p>Een product op je volglijst is € 84 goedkoper geworden.</p></div></div>
+              <div class="alert"><div class="alert-icon">↻</div><div><h4>Software-update beschikbaar</h4><p>Een van je apparaten heeft een belangrijke firmware-update.</p></div></div>
+              <div class="alert"><div class="alert-icon">?</div><div><h4>De redactie vraagt je mee te denken</h4><p>Welke praktische AI-taak moeten we volgende week testen?</p></div></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="section">
+          <div class="section-head"><div><h2>Meer uit jouw interesses</h2><p>Beeld en verhalen rond de onderwerpen die je volgt.</p></div></div>
+          <div class="grid">
+            <article class="card interest-card"><div class="interest-image"><img src="assets/images/gaming.avif" alt="Neonlicht in de vorm van een gamecontroller" loading="lazy" width="735" height="490"></div><div class="interest-copy"><div class="meta">Gaming · GTA 6</div><h3>Wat wil jij dat Gaming Mode als eerste uitzoekt?</h3><p>Een plek voor verwachtingen, vragen en de sfeer rond nieuwe games.</p></div></article>
+            <article class="card interest-card"><div class="interest-image"><img src="assets/images/smart-home.avif" alt="Bedieningspaneel voor een slim huis aan de muur" loading="lazy" width="1470" height="980"></div><div class="interest-copy"><div class="meta">Smart home · praktisch</div><h3>Een slimmer huis begint met keuzes die bij je passen</h3><p>Van eenvoudige bediening tot energie, apparaten en automatisering.</p></div></article>
+            <article class="card interest-card"><div class="interest-image"><img src="assets/images/redactie.avif" alt="Camera en digitale werkplek als illustratie van redactioneel werk" loading="lazy" width="1470" height="980"></div><div class="interest-copy"><div class="meta">Achter de schermen · redactie</div><h3>Denk mee over de volgende test van ID</h3><p>De redactie deelt vragen en betrekt lezers bij verhalen in wording.</p></div></article>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="grid">
+            <div class="card topics"><div class="pad"><div class="section-head" style="margin:0 0 10px"><div><h2>Je volgt</h2><p>Onderwerpen die je feed sturen.</p></div></div><div><span class="tag on">AI</span><span class="tag on">Apple</span><span class="tag on">Smart home</span><span class="tag on">GTA 6</span><span class="tag on">Thuisbatterij</span><span class="tag">Windows</span><span class="tag">Audio</span></div><div class="link" style="margin-top:14px">Interesses beheren →</div></div></div>
+            <div class="card devices"><div class="pad"><div class="section-head" style="margin:0 0 14px"><div><h2>Mijn apparaten</h2><p>Voor relevantere tips, updates en compatibiliteitschecks.</p></div><div class="link" onclick="showView('devices')">Alles bekijken →</div></div><div class="device-grid">
+              <div class="device"><div class="device-ico">⌘</div><b>MacBook Pro</b><small>Apple silicon</small><div class="status">● Actueel</div></div>
+              <div class="device"><div class="device-ico">▯</div><b>iPhone</b><small>iOS</small><div class="status">● Actueel</div></div>
+              <div class="device"><div class="device-ico">▰</div><b>Televisie</b><small>Smart TV</small><div class="status" style="color:#a86a17">● Update beschikbaar</div></div>
+              <div class="device"><div class="device-ico">＋</div><b>Apparaat toevoegen</b><small>Maak je feed slimmer</small><div class="status" style="color:var(--brand)">Toevoegen →</div></div>
+            </div></div></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="grid">
+            <div class="card community"><div class="pad"><div class="section-head" style="margin:0 0 14px"><div><h2>Doe mee met ID</h2><p>Kleine bijdragen, direct verbonden aan de journalistiek.</p></div></div><div class="poll"><div class="kicker">Vraag van de redactie</div><h3>Waar loop jij het vaakst tegenaan met AI-tools?</h3><div class="option"><span>Ze geven te vaak onzin</span><b>34%</b></div><div class="option"><span>Ik weet niet waar ik moet beginnen</span><b>29%</b></div><div class="option"><span>Privacy en gegevens</span><b>22%</b></div></div><div class="people"><span class="face"></span><span class="face"></span><span class="face"></span><span class="face"></span><b>184 lezers deden mee</b></div></div></div>
+            <div class="card saved"><div class="pad"><div class="section-head" style="margin:0 0 8px"><div><h2>Bewaard voor later</h2><p>Je eigen kleine kennisbank.</p></div></div><div class="saved-item"><div class="saved-icon">★</div><div><h4>Welke NAS past bij jou?</h4><p>Koopgids · 8 min lezen</p></div></div><div class="saved-item"><div class="saved-icon">★</div><div><h4>Alles over thuisbatterijen</h4><p>Dossier · 38 artikelen</p></div></div><div class="saved-item"><div class="saved-icon">★</div><div><h4>Lokale AI op je eigen computer</h4><p>Uitleg · 12 min lezen</p></div></div><div class="link" style="margin-top:12px">Naar alles wat je hebt bewaard →</div></div></div>
+          </div>
+        </div>
+
+        <div class="section"><div class="card"><div class="pad"><div class="section-head" style="margin:0"><div><h2>Mijn ID wordt beter naarmate jij het gebruikt</h2><p>72% ingesteld — voeg nog een paar voorkeuren toe om irrelevante updates verder terug te dringen.</p></div><b>72%</b></div><div class="progress"><span></span></div></div></div></div>
+        <div class="demo-bar">Conceptuele interface — voorbeeldgegevens en sfeerbeelden. De bedoeling is dat Mijn ID voelt als een persoonlijke voordeur naar ID.nl. <a href="index.html" style="color:var(--brand-dark);font-weight:800;text-decoration:underline">Terug naar het businessplan</a>.</div>
+      </section>
+
+      <section class="view" id="view-follow"><div class="placeholder"><div class="giant">◎</div><h2>Volgend</h2><p>Hier zouden onderwerpen, producten, dossiers en redacteuren samenkomen. De gebruiker kan per item kiezen: alleen in de feed, push- of e-mailmeldingen bij belangrijk nieuws, of prijs- en updatemeldingen.</p></div></section>
+      <section class="view" id="view-devices"><div class="placeholder"><div class="giant">▣</div><h2>Mijn apparaten</h2><p>Een digitale apparatenkast: merk, model, aankoopjaar en eventueel de aankoopprijs. ID koppelt daar relevante handleidingen, firmwaremeldingen, compatibiliteitsnieuws, accessoires en vervangingsadvies aan.</p></div></section>
+      <section class="view" id="view-saved"><div class="placeholder"><div class="giant">★</div><h2>Bewaard</h2><p>Niet alleen bladwijzers, maar verzamelingen: ‘Nieuwe televisie’, ‘Slim huis’ en ‘Later lezen’. Artikelen, reviews, producten en dossiers kunnen door elkaar worden bewaard.</p></div></section>
+      <section class="view" id="view-community"><div class="placeholder"><div class="giant">◉</div><h2>Community</h2><p>Geen los forum als vertrekpunt, maar vragen, polls, ervaringen en testoproepen die direct verbonden zijn aan relevante artikelen en dossiers. Goede bijdragen kunnen door de redactie worden uitgelicht.</p></div></section>
+      <section class="view" id="view-alerts"><div class="placeholder"><div class="giant">♢</div><h2>Meldingen</h2><p>Eén overzicht voor prijsdalingen, productupdates, nieuwe artikelen rond gevolgde onderwerpen en reacties op eigen bijdragen. De gebruiker bepaalt zelf per soort melding hoe vaak ID contact mag opnemen.</p></div></section>
+    </div>
+  </main>
+</div>
+
+<nav class="bottomnav" id="bottomnav">
+  <button class="active" data-view="home"><span class="bi">⌂</span>Voor jou</button>
+  <button data-view="follow"><span class="bi">◎</span>Volgend</button>
+  <button data-view="devices"><span class="bi">▣</span>Apparaten</button>
+  <button data-view="saved"><span class="bi">★</span>Bewaard</button>
+  <button data-view="community"><span class="bi">◉</span>Meedoen</button>
+</nav>
+<script>
+function showView(name){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  const el=document.getElementById('view-'+name); if(el) el.classList.add('active');
+  document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===name));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('[data-view]').forEach(btn=>btn.addEventListener('click',()=>showView(btn.dataset.view)));
+</script>
+</body>
+</html>
+
